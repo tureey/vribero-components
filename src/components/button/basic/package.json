@@ -1,0 +1,19 @@
+{
+  "name": "@vribero/button-basic--themed",
+  "version": "1.0.0",
+  "description": "Basic button with JSS prepared to receive a theme as json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "button",
+    "basic",
+    "jss",
+    "ui",
+    "library",
+    "victorribero"
+  ],
+  "author": "Victor Ribero",
+  "license": "ISC"
+}

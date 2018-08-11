@@ -1,17 +1,17 @@
 {
-  "name": "@vribero/form-input--themed",
+  "name": "@vribero/form-label--themed",
   "version": "1.0.0",
-  "description": "Basic input field with JSS prepared to receive a theme as json",
+  "description": "Basic label with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "form",
-    "input",
-    "jss",
+    "label",
     "accessibe",
     "aria",
+    "jss",
     "ui",
     "library",
     "victorribero"

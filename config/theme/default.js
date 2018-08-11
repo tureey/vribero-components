@@ -2,15 +2,13 @@ const theme = {
   colors: {
     system: '#463F3A',
     primary: '#8A817C',
-    accent: '#E0AFA0',
-    grey_dark: '#9B9892',
-    grey: '#BCB8B1',
-    grey_light: '#D3CEC6',
+    grey_dark: '#DBD6CE',
+    grey: '#EDEAE6',
+    grey_light: '#FFFEF9',
     accent: '#E0AFA0',
     
-    succes: '',
-    danger: '',
-    info: '',
+    success: '#00B16A',
+    danger: '#EF4836',
 
     fb: '',
     ig: '',
@@ -21,29 +19,36 @@ const theme = {
     padd: {
       xs: '3px',
       s: '8px',
-      m: '16px',
-      l: '20px',
-      xl: '25px',
-      xl: '53px',
+      m: '12px',
+      l: '15px',
+      xl: '20px',
+      xl: '35px',
     },
     marg: {
       xs: '3px',
       s: '8px',
-      m: '16px',
-      l: '20px',
-      xl: '25px',
-      xl: '53px',
+      m: '12px',
+      l: '15px',
+      xl: '20px',
+      xl: '35px',
     },
   },
-  fonts: {
+  font: {
     size: {
-      xs: '8px',
+      xs: '10px',
       s: '14px',
       m: '16px' ,
       l: '18px',
       xl: '21px',
       xxl: '27px',
       giant: '40px',
+    },
+    weight: {
+      xs: 'lighter',
+      s: 'light',
+      m: 'normal',
+      l: 'bold',
+      xl: 'bolder',
     },
     family: {
       main: '"Raleway", Open-sans, sans-serif'

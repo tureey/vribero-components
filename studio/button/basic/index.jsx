@@ -7,6 +7,8 @@ const stories = theme => (
   storiesOf('Button', module)
   .add('Basic', () => (
     <React.Fragment>
+      <h4>Primary buttons</h4>
+      <span>small</span>&nbsp;
       <Button
         size='small'
         type="primary"
@@ -32,6 +34,7 @@ const stories = theme => (
         Button
       </Button>
       <br/><br/>
+      <span>medium</span>&nbsp;
       <Button
         size='medium'
         type="primary"
@@ -57,6 +60,7 @@ const stories = theme => (
         Button
       </Button>
       <br/><br/>
+      <span>large</span>&nbsp;
       <Button
         size='large'
         type="primary"
@@ -83,6 +87,8 @@ const stories = theme => (
       </Button>
       <br/><br/>
 
+      <h4>Secondary buttons</h4>
+      <span>small</span>&nbsp;
       <Button
         size='small'
         type="secondary"
@@ -94,7 +100,7 @@ const stories = theme => (
       <Button
         size='small'
         type="secondary"
-        importance='secondary'
+        importance="secondary"
         theme={theme}
         onClick={action('clicked')}>
         Button
@@ -108,6 +114,7 @@ const stories = theme => (
         Button
       </Button>
       <br/><br/>
+      <span>medium</span>&nbsp;
       <Button
         size='medium'
         type="secondary"
@@ -133,6 +140,7 @@ const stories = theme => (
         Button
       </Button>
       <br/><br/>
+      <span>large</span>&nbsp;
       <Button
         size='large'
         type="secondary"

@@ -1,17 +1,18 @@
 {
-  "name": "@vribero/form-input--themed",
+  "name": "@vribero/form-helptext--themed",
   "version": "1.0.0",
-  "description": "Basic input field with JSS prepared to receive a theme as json",
+  "description": "Help text of an input field with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "form",
-    "input",
-    "jss",
+    "help text",
+    "tip",
     "accessibe",
     "aria",
+    "jss",
     "ui",
     "library",
     "victorribero"

@@ -1,12 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {BadgeBasicStyled} from './styles'
 
-const Badge = ({children, theme, ...props}) => (
-  <span className={className}>{children}</span>
+const BadgeBasic = ({children, ...props}) => (
+  <BadgeBasicStyled
+    role='status'
+    {...props}>
+    <span>{children}</span>
+  </BadgeBasicStyled>
 )
 
-export default Badge
+BadgeBasic.propTypes = {
+  type: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+  ]).isRequired,
+  size: PropTypes.oneOf(['small','medium','large']).isRequired,
+  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
 
-Badge.propTypes = {
   theme: PropTypes.object,
 }
+
+BadgeBasic.defaultProps = {
+  type: 'primary',
+  size: 'small',
+  shape: 'rounded',
+};
+
+export default BadgeBasic

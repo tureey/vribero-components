@@ -29,15 +29,14 @@ ButtonBasic.propTypes = {
   type: PropTypes.oneOf([
     'primary',
     'secondary',
-    'terciary',
   ]).isRequired,
   importance: PropTypes.oneOf([
     'primary',
     'secondary',
     'terciary',
   ]).isRequired,
-  size: PropTypes.oneOfType(['small','medium','large']).isRequired,
-  shape: PropTypes.oneOfType(['square','rounded','pill']).isRequired,
+  size: PropTypes.oneOf(['small','medium','large']).isRequired,
+  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   href: PropTypes.string,
@@ -50,7 +49,7 @@ ButtonBasic.defaultProps = {
   type: 'primary',
   importance: 'primary',
   size: 'medium',
-  shapew: 'rounded',
+  shape: 'rounded',
 };
 
 export default ButtonBasic

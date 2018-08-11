@@ -1,14 +1,16 @@
 {
-  "name": "@vribero/button-basic--themed",
+  "name": "@vribero/badge-basic--themed",
   "version": "1.0.0",
-  "description": "Basic button with JSS prepared to receive a theme as json",
+  "description": "Basic badge with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "button",
+    "badge",
     "basic",
+    "accessibe",
+    "aria",
     "jss",
     "ui",
     "library",

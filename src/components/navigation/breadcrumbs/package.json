@@ -1,0 +1,21 @@
+{
+  "name": "@vribero/navigation-breadcrumbs--themed",
+  "version": "1.0.0",
+  "description": "Basic breadcrumbs with JSS prepared to receive a theme as json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "badge",
+    "basic",
+    "accessibe",
+    "aria",
+    "jss",
+    "ui",
+    "library",
+    "victorribero"
+  ],
+  "author": "Victor Ribero",
+  "license": "ISC"
+}

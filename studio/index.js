@@ -6,6 +6,8 @@ import LabelStories from './form/label'
 import HelpTextStories from './form/helpText'
 import InputWithLabelAndHelpTextStories from './form/InputWithLabelAndHelpText'
 import PanelStories from './panel/basic'
+import LinkStories from './navigation/link'
+LinkStories(defaultTheme)
 PanelStories(defaultTheme)
 InputWithLabelAndHelpTextStories(defaultTheme)
 HelpTextStories(defaultTheme)

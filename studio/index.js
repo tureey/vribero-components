@@ -3,8 +3,13 @@ import ButtonBasicStories from './button/basic'
 import BadgeBasicStories from './badge/basic'
 import InputStories from './form/input'
 import LabelStories from './form/label'
-
-ButtonBasicStories(defaultTheme)
-BadgeBasicStories(defaultTheme)
-InputStories(defaultTheme)
+import HelpTextStories from './form/helpText'
+import InputWithLabelAndHelpTextStories from './form/InputWithLabelAndHelpText'
+import PanelStories from './panel/basic'
+PanelStories(defaultTheme)
+InputWithLabelAndHelpTextStories(defaultTheme)
+HelpTextStories(defaultTheme)
 LabelStories(defaultTheme)
+InputStories(defaultTheme)
+BadgeBasicStories(defaultTheme)
+ButtonBasicStories(defaultTheme)

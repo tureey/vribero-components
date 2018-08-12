@@ -4,7 +4,7 @@ const theme = {
     primary: '#8A817C',
     grey_dark: '#DBD6CE',
     grey: '#EDEAE6',
-    grey_light: '#FFFEF9',
+    grey_light: '#F7F6F4',
     accent: '#E0AFA0',
     
     success: '#00B16A',
@@ -22,7 +22,8 @@ const theme = {
       m: '12px',
       l: '15px',
       xl: '20px',
-      xl: '35px',
+      xxl: '25px',
+      giant: '35px',
     },
     marg: {
       xs: '3px',
@@ -30,12 +31,20 @@ const theme = {
       m: '12px',
       l: '15px',
       xl: '20px',
-      xl: '35px',
+      xxl: '25px',
+      giant: '35px',
     },
+  },
+  box: {
+    radius: {
+      none: 0,
+      rounded: '2px',
+      pill: '500px',
+    }
   },
   font: {
     size: {
-      xs: '10px',
+      xs: '12px',
       s: '14px',
       m: '16px' ,
       l: '18px',
@@ -44,11 +53,11 @@ const theme = {
       giant: '40px',
     },
     weight: {
-      xs: 'lighter',
-      s: 'light',
-      m: 'normal',
-      l: 'bold',
-      xl: 'bolder',
+      xs: 100,
+      s: 300,
+      m: 400,
+      l: 700,
+      xl: 900,
     },
     family: {
       main: '"Raleway", Open-sans, sans-serif'

@@ -1,15 +1,17 @@
 import styled from 'styled-components'
+import { lighten } from 'polished'
 
-const LabelStyled = styled.label`
+const HelpTextStyled = styled.span`
   display: block;
-  color: ${props => props.theme.colors.system};
-  font-size: ${props => props.theme.font.size.m};
+  color: ${props => lighten(0.3, props.theme.colors.system)};
+  font-size: ${props => props.theme.font.size.xs};
   font-family: ${props => props.theme.font.family.main};
-  font-weight: ${props => props.theme.font.weight.m};
+  font-weight: ${props => props.theme.font.weight.s};
   letter-spacing: 0.25px;
-  margin-bottom: ${props => props.theme.spacing.marg.s};
+  margin-top: ${props => props.theme.spacing.marg.s};
+  font-style: italic;
 `
 
 export {
-  LabelStyled 
+  HelpTextStyled 
 }

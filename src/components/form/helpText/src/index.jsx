@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {LabelStyled} from './styles'
+import {HelpTextStyled} from './styles'
 
-const Label = ({forInput, children, ...props}) => (
-  <LabelStyled for={forInput} {...props}>
+const HelpText = ({children, ...props}) => (
+  <HelpTextStyled {...props}>
     {children}
-  </LabelStyled>
+  </HelpTextStyled>
 )
 
-Label.propTypes = {
-  forInput: PropTypes.string.isRequired,
-
+HelpText.propTypes = {
   theme: PropTypes.object,
 }
 
-export default Label
+export default HelpText

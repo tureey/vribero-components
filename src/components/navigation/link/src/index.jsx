@@ -11,11 +11,14 @@ const Link = ({url, children, theme, ...props}) => (
 Link.propTypes = {
   url: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['primary', 'secondary']),
+  underlined: PropTypes.bool,
+
   theme: PropTypes.object,
 }
 
 Link.defaultProps = {
   color: 'secondary',
+  underlined: false,
 }
 
 export default Link

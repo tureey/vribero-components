@@ -7,6 +7,7 @@ const LinkStyled = styled.a`
   font-weight: ${props => props.theme.font.size.s};
   transition: .15s ease all;
   cursor: pointer;
+  text-decoration: ${props => props.underlined ? 'underlined' : 'none'};
 
   ${({color, theme}) =>
     color === 'primary'

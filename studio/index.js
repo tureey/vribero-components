@@ -7,6 +7,8 @@ import HelpTextStories from './form/helpText'
 import InputWithLabelAndHelpTextStories from './form/InputWithLabelAndHelpText'
 import PanelStories from './panel/basic'
 import LinkStories from './navigation/link'
+import BreadcrumbsStories from './navigation/breadcrumbs'
+BreadcrumbsStories(defaultTheme)
 LinkStories(defaultTheme)
 PanelStories(defaultTheme)
 InputWithLabelAndHelpTextStories(defaultTheme)

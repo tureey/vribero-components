@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {LinkStyled} from './styles'
 
-const Link = ({url, children, theme, ...props}) => (
+const Link = ({url, children, target, theme, ...props}) => (
   <LinkStyled
     href={url}
-    target='_blank'
+    target={target}
     theme={theme}
     {...props}
   >
@@ -18,6 +18,7 @@ Link.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary']),
   title: PropTypes.string,
   underlined: PropTypes.bool,
+  target: PropTypes.oneOf(['_self', '_blank']),
 
   theme: PropTypes.object,
 }
@@ -25,6 +26,7 @@ Link.propTypes = {
 Link.defaultProps = {
   color: 'secondary',
   underlined: false,
+  target: '_blank'
 }
 
 export default Link

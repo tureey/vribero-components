@@ -2,7 +2,7 @@ const theme = {
   colors: {
     system: '#463F3A',
     primary: '#8A817C',
-    grey_dark: '#DBD6CE',
+    grey_dark: '#BCB8B1',
     grey: '#EDEAE6',
     grey_light: '#F7F6F4',
     accent: '#E0AFA0',
@@ -40,7 +40,7 @@ const theme = {
       none: 0,
       rounded: '2px',
       pill: '500px',
-    }
+    },
   },
   font: {
     size: {
@@ -58,6 +58,12 @@ const theme = {
       m: 400,
       l: 700,
       xl: 900,
+    },
+    lineHeight: {
+      s: '1',
+      m: '1.25',
+      l: '1.5',
+      xl: '1.75',
     },
     family: {
       main: '"Raleway", Open-sans, sans-serif'

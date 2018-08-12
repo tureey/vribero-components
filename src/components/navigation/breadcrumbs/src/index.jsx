@@ -1,32 +1,56 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
-import {BadgeBasicStyled} from './styles'
+import {
+  BreadcrumbsListStyled,
+  BreadcrumbsElementStyled,
+  LastItemStyled,
+} from './styles'
+import Link from '../../link/src'
 
-const BadgeBasic = ({children, ...props}) => (
-  <BadgeBasicStyled
-    role='status'
-    {...props}>
-    <span>{children}</span>
-  </BadgeBasicStyled>
+const Breadcrumbs = ({
+  items,
+  separatorIcon,
+  theme,
+  ...props
+}) => (
+  <nav aria-label='breadcrumb' role='navigation'>
+    <BreadcrumbsListStyled theme={theme}>
+      {items.map(({url, label}, index) => {
+        const isLastItem = (index + 1) >= items.length
+        
+        return (
+          <BreadcrumbsElementStyled theme={theme} key={index}>
+            {!isLastItem && (
+              <BreadcrumbLink url={url} theme={theme}>
+                {label}
+              </BreadcrumbLink>
+            )}
+
+            {isLastItem && (
+              <LastItemStyled theme={theme}>
+                {label}
+              </LastItemStyled>
+            )}
+          </BreadcrumbsElementStyled>
+        )
+      })}
+    </BreadcrumbsListStyled>
+  </nav>
 )
 
-BadgeBasic.propTypes = {
-  type: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'success',
-    'danger',
-  ]).isRequired,
-  size: PropTypes.oneOf(['small','medium','large']).isRequired,
-  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
+const BreadcrumbLink = ({url, children, theme}) => (
+  <Link color='secondary' url={url} theme={theme}>{children}</Link>
+)
+
+Breadcrumbs.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      url: PropTypes.string
+    })
+  ).isRequired,
 
   theme: PropTypes.object,
 }
 
-BadgeBasic.defaultProps = {
-  type: 'primary',
-  size: 'small',
-  shape: 'rounded',
-};
-
-export default BadgeBasic
+export default Breadcrumbs

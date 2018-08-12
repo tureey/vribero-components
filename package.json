@@ -4,7 +4,7 @@
   "description": "UI Library with components that receive theme.json to use JSS",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "studio": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
     "type": "git",

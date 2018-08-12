@@ -9,6 +9,7 @@ const PanelBasicStyled= styled.section`
   font-size: ${props => props.theme.font.size.m};
   font-weight: ${props => props.theme.font.weight.s};
   letter-spacing: 0.25px;
+  // box-shadow: 0 2px 1px 0 rgba(0,0,0,.05);
 `
 
 const PanelBasicHeaderStyled= styled.header`

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import {LinkStyled} from './styles'
 
 const Link = ({url, children, theme, ...props}) => (
-  <LinkStyled href={url} theme={theme} {...props}>
+  <LinkStyled
+    href={url}
+    target='_blank'
+    theme={theme}
+    {...props}
+  >
     {children}
   </LinkStyled>
 )
@@ -11,6 +16,7 @@ const Link = ({url, children, theme, ...props}) => (
 Link.propTypes = {
   url: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['primary', 'secondary']),
+  title: PropTypes.string,
   underlined: PropTypes.bool,
 
   theme: PropTypes.object,

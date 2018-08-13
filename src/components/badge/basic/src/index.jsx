@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {BadgeBasicStyled} from './styles'
 
-const BadgeBasic = ({children, ...props}) => (
+const BadgeBasic = props => (
   <BadgeBasicStyled
     role='status'
     {...props}>
-    <span>{children}</span>
+    <span>{props.children}</span>
   </BadgeBasicStyled>
 )
 

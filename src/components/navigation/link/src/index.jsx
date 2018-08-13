@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {LinkStyled} from './styles'
 
-const Link = ({url, children, target, theme, ...props}) => (
+const Link = ({url, children, target, theme} = props) => (
   <LinkStyled
     href={url}
     target={target}

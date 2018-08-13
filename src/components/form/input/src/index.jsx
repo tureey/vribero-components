@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 import {InputFlatStyled} from './styles'
 
 class Input extends Component {
+  constructor(props) {
+    super(props)
+    this._handleOnChange = this._handleOnChange.bind(this)
+  }
+
   render() {
     const {
       id,
@@ -54,7 +59,7 @@ class Input extends Component {
     )
   }
 
-  _handleOnChange = event => {
+  _handleOnChange(event) {
     this.props.onchange(event.target.value)
   }
 }

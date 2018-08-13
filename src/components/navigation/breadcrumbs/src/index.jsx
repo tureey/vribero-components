@@ -9,10 +9,8 @@ import Link from '../../link/src'
 
 const Breadcrumbs = ({
   items,
-  separatorIcon,
   theme,
-  ...props
-}) => (
+} = props) => (
   <nav aria-label='breadcrumb' role='navigation'>
     <BreadcrumbsListStyled theme={theme}>
       {items.map(({url, label}, index) => {

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import {ButtonBasicStyled, LinkStyled, ButtonInnerStyled} from './styles'
 
 const ButtonBasic = ({
-  children, leftIcon, rightIcon, disabled, onClick, link, href, ...props
-}) => {
+  children, leftIcon, rightIcon, disabled, onClick, link, href
+} = props) => {
   return !link
     ? (
       <ButtonBasicStyled {...props} disabled={disabled} onClick={onClick}>

@@ -1,5 +1,5 @@
 {
-  "name": "@vribero/panel-basic--themed",
+  "name": "vribero-component--panel-basic--themed",
   "version": "1.0.0",
   "description": "Basic panel with JSS prepared to receive a theme as json",
   "main": "index.js",

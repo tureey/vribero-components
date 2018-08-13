@@ -1,5 +1,5 @@
 {
-  "name": "@vribero/badge-basic--themed",
+  "name": "vribero-component--badge-basic--themed",
   "version": "1.0.0",
   "description": "Basic badge with JSS prepared to receive a theme as json",
   "main": "index.js",

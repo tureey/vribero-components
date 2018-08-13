@@ -1,5 +1,5 @@
 {
-  "name": "@vribero/navigation-breadcrumbs--themed",
+  "name": "vribero-component--navigation-breadcrumbs--themed",
   "version": "1.0.0",
   "description": "Basic breadcrumbs with JSS prepared to receive a theme as json",
   "main": "index.js",

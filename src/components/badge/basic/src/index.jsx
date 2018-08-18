@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {BadgeBasicStyled} from './styles'
+import { BadgeBasicStyled } from './styles'
 
 const BadgeBasic = props => (
   <BadgeBasicStyled
@@ -17,8 +17,8 @@ BadgeBasic.propTypes = {
     'success',
     'danger',
   ]).isRequired,
-  size: PropTypes.oneOf(['small','medium','large']).isRequired,
-  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
 
   theme: PropTypes.object,
 }

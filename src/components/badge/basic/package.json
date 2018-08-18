@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--badge-basic--themed",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Basic badge with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

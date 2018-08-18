@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--form-helptext--themed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Help text of an input field with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

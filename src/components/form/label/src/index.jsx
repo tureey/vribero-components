@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {LabelStyled} from './styles'
+import { LabelStyled } from './styles'
 
-const Label = ({forInput, children} = props) => (
-  <LabelStyled for={forInput} {...props}>
-    {children}
+const Label = props => (
+  <LabelStyled for={props.forInput} {...props}>
+    {props.children}
   </LabelStyled>
 )
 

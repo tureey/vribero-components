@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {HelpTextStyled} from './styles'
+import { HelpTextStyled } from './styles'
 
-const HelpText = ({children} = props) => (
+const HelpText = (props) => (
   <HelpTextStyled {...props}>
-    {children}
+    {props.children}
   </HelpTextStyled>
 )
 

@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--form-input--themed",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Basic input field with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

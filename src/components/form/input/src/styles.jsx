@@ -10,6 +10,10 @@ const InputFlatStyled = styled.input`
   font-family: ${props => props.theme.font.family.main};
   letter-spacing: 0.2px;
   font-weight: 300;
+  
+  & + label {
+    margin-top: ${props => props.theme.spacing.marg.m};
+  }
 
   ${({ appearance }) =>
     appearance === 'white'

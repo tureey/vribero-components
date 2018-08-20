@@ -1,4 +1,10 @@
 {
-    "presets": ["env", "react"],
-    "plugins": ["babel-plugin-styled-components"]
+    "presets": [
+        "env",
+        "react"
+    ],
+    "plugins": [
+        "babel-plugin-styled-components"
+    ],
+    "exclude": "/node_modules/"
 }

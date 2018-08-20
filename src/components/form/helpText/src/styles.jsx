@@ -11,7 +11,7 @@ const HelpTextStyled = styled.span`
   margin-top: ${props => props.theme.spacing.marg.s};
   font-style: italic;
 
-  & + label {
+  + label {
     margin-top: ${props => props.theme.spacing.marg.m};
   }
 `

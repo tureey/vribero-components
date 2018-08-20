@@ -1,6 +1,6 @@
-import React, {Component, Fragment} from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import {InputFlatStyled} from './styles'
+import { InputFlatStyled } from './styles'
 
 class Input extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class Input extends Component {
       id,
       name,
       type,
+      size,
       shape,
       appearance,
       value,
@@ -45,6 +46,7 @@ class Input extends Component {
             name={name}
             type={type}
             value={value}
+            size={size}
             shape={shape}
             appearance={appearance}
             placeholder={placeholder}
@@ -68,8 +70,9 @@ Input.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   placeholder: PropTypes.string,
-  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
   appearance: PropTypes.oneOf(['flat', 'standard']),
   onChange: PropTypes.func,
 
@@ -82,6 +85,7 @@ Input.propTypes = {
 Input.defaultProps = {
   appearance: 'standard',
   type: 'text',
+  size: 'medium',
   shape: 'rounded',
   appearance: 'flat',
   disabled: false,

@@ -6,5 +6,4 @@
     "plugins": [
         "babel-plugin-styled-components"
     ],
-    "exclude": "/node_modules/"
 }

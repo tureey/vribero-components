@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--form-label--themed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Basic label with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

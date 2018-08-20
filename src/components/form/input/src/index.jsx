@@ -23,41 +23,21 @@ class Input extends Component {
     } = this.props;
 
     return (
-      <Fragment>
-        {appearance === 'standard' && (
-          <input
-            id={id}
-            name={name}
-            type={type}
-            value={value}
-            shape={shape}
-            appearance={appearance}
-            placeholder={placeholder}
-            disabled={disabled}
-            aria-required={required}
-            required={required}
-            onChange={this._handleOnChange}
-            {...this.props}
-          />
-        )}
-        {appearance === 'flat' && (
-          <InputFlatStyled
-            id={id}
-            name={name}
-            type={type}
-            value={value}
-            size={size}
-            shape={shape}
-            appearance={appearance}
-            placeholder={placeholder}
-            disabled={disabled}
-            aria-required={required}
-            required={required}
-            onChange={this._handleOnChange}
-            {...this.props}
-          />
-        )}
-      </Fragment>
+      <InputFlatStyled
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        size={size}
+        shape={shape}
+        appearance={appearance}
+        placeholder={placeholder}
+        disabled={disabled}
+        aria-required={required}
+        required={required}
+        onChange={this._handleOnChange}
+        {...this.props}
+      />
     )
   }
 
@@ -73,7 +53,7 @@ Input.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   placeholder: PropTypes.string,
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
-  appearance: PropTypes.oneOf(['flat', 'standard']),
+  appearance: PropTypes.oneOf(['white', 'grey']),
   onChange: PropTypes.func,
 
   disabled: PropTypes.bool,
@@ -83,7 +63,7 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  appearance: 'standard',
+  appearance: 'white',
   type: 'text',
   size: 'medium',
   shape: 'rounded',

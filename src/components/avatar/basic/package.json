@@ -4,8 +4,7 @@
   "description": "Basic avatar with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
-    "build": "rm -Rf ./lib && mkdir -p ./lib && npm run build:js",
-    "build:js": "../../../node_modules/.bin/babel --presets sui ./src --out-dir ./lib"
+    "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
   },
   "keywords": [
     "avatar",

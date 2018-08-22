@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {AvatarBasicStyled} from './styles'
+import { AvatarBasicStyled } from './styles'
 
-const AvatarBasic = ({url, ...props}) => (
+const AvatarBasic = ({ url, ...props }) => (
   <AvatarBasicStyled src={url} {...props} />
 )
 
 AvatarBasic.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
-  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'circle']).isRequired,
   isBordered: PropTypes.bool,
   borderColor: PropTypes.oneOf([
     'primary', 'secondary', 'grey', 'system'

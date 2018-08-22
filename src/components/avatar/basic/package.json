@@ -1,14 +1,14 @@
 {
-  "name": "@vribero/badge-basic--themed",
+  "name": "@vribero/avatar-basic--themed",
   "version": "1.0.0",
-  "description": "Basic badge with JSS prepared to receive a theme as json",
+  "description": "Basic avatar with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "build": "rm -Rf ./lib && mkdir -p ./lib && npm run build:js",
     "build:js": "../../../node_modules/.bin/babel --presets sui ./src --out-dir ./lib"
   },
   "keywords": [
-    "badge",
+    "avatar",
     "basic",
     "accessibe",
     "aria",

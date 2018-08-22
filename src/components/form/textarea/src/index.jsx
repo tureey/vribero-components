@@ -12,7 +12,6 @@ class Textarea extends Component {
     const {
       id,
       name,
-      type,
       size,
       shape,
       appearance,
@@ -26,7 +25,6 @@ class Textarea extends Component {
       <TextareaStyled
         id={id}
         name={name}
-        type={type}
         value={value}
         size={size}
         shape={shape}
@@ -49,7 +47,6 @@ class Textarea extends Component {
 Textarea.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   placeholder: PropTypes.string,
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
@@ -64,7 +61,6 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   appearance: 'grey',
-  type: 'text',
   size: 'medium',
   shape: 'rounded',
   disabled: false,

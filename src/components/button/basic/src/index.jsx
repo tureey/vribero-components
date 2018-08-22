@@ -1,26 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {ButtonBasicStyled, LinkStyled, ButtonInnerStyled} from './styles'
+import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from './styles'
 
-const ButtonBasic = ({
-  children, leftIcon, rightIcon, disabled, onClick, link, href, ...props
-}) => {
+const ButtonBasic = props => {
   return !link
     ? (
-      <ButtonBasicStyled {...props} disabled={disabled} onClick={onClick}>
+      <ButtonBasicStyled {...props} disabled={props.disabled} onClick={props.onClick}>
         <ButtonInnerStyled>
-          {leftIcon}
-          <span>{children}</span>
-          {rightIcon}
+          {props.leftIcon}
+          <span>{props.children}</span>
+          {props.rightIcon}
         </ButtonInnerStyled>
       </ButtonBasicStyled>
     ) : (
-      <LinkStyled {...props} href={href}>
+      <LinkStyled {...props} href={props.href}>
         <ButtonInnerStyled>
-            {leftIcon}
-            <span>{children}</span>
-            {rightIcon}
-          </ButtonInnerStyled>
+          {props.leftIcon}
+          <span>{props.children}</span>
+          {props.rightIcon}
+        </ButtonInnerStyled>
       </LinkStyled>
     )
 }
@@ -35,8 +33,8 @@ ButtonBasic.propTypes = {
     'secondary',
     'terciary',
   ]).isRequired,
-  size: PropTypes.oneOf(['small','medium','large']).isRequired,
-  shape: PropTypes.oneOf(['square','rounded','pill']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   href: PropTypes.string,

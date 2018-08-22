@@ -1,17 +1,17 @@
 {
-  "name": "vribero-component--form-label--themed",
-  "version": "1.0.3",
-  "description": "Basic label with JSS prepared to receive a theme as json",
+  "name": "vribero-component--form-textarea--themed",
+  "version": "1.0.1",
+  "description": "Basic input field with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
   },
   "keywords": [
     "form",
-    "label",
+    "textarea",
+    "jss",
     "accessibe",
     "aria",
-    "jss",
     "ui",
     "library",
     "victorribero"

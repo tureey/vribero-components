@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {LinkStyled} from './styles'
+import { LinkStyled } from './styles'
 
-const Link = ({url, children, target, theme, ...props}) => (
+const Link = props => (
   <LinkStyled
-    href={url}
-    target={target}
-    theme={theme}
+    href={props.url}
+    target={props.target}
+    theme={props.theme}
     {...props}
   >
-    {children}
+    {props.children}
   </LinkStyled>
 )
 

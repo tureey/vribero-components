@@ -7,15 +7,17 @@ import {
   PanelBasicBodyStyled,
 } from './styles'
 
-const PanelBasic = ({title, content, colored, theme, ...props}) => (
-  <PanelBasicStyled colored={colored} theme={theme} {...props}>
-    <PanelBasicHeaderStyled theme={theme}>
-      <PanelBasicTitleStyled theme={theme}>
-        {title}
+const PanelBasic = props => (
+  <PanelBasicStyled colored={props.colored} theme={props.theme} {...props}>
+    <PanelBasicHeaderStyled theme={props.theme}>
+      <PanelBasicTitleStyled theme={props.theme}>
+        {props.title}
       </PanelBasicTitleStyled>
     </PanelBasicHeaderStyled>
 
-    <PanelBasicBodyStyled theme={theme}>{content}</PanelBasicBodyStyled>
+    <PanelBasicBodyStyled theme={props.theme}>
+      {props.content}
+    </PanelBasicBodyStyled>
   </PanelBasicStyled>
 )
 

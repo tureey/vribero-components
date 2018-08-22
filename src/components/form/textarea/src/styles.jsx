@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
 
-const InputStyled = styled.input`
+const TextareaStyled = styled.textarea`
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -69,5 +69,5 @@ const InputStyled = styled.input`
 `
 
 export {
-  InputStyled
+  TextareaStyled
 }

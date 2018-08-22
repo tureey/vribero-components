@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import {
   BreadcrumbsListStyled,
@@ -7,27 +7,22 @@ import {
 } from './styles'
 import Link from '../../link/src'
 
-const Breadcrumbs = ({
-  items,
-  separatorIcon,
-  theme,
-  ...props
-}) => (
+const Breadcrumbs = props => (
   <nav aria-label='breadcrumb' role='navigation'>
-    <BreadcrumbsListStyled theme={theme}>
-      {items.map(({url, label}, index) => {
-        const isLastItem = (index + 1) >= items.length
-        
+    <BreadcrumbsListStyled theme={props.theme}>
+      {props.items.map(({ url, label }, index) => {
+        const isLastItem = (index + 1) >= props.items.length
+
         return (
-          <BreadcrumbsElementStyled theme={theme} key={index}>
+          <BreadcrumbsElementStyled theme={props.theme} key={index}>
             {!isLastItem && (
-              <BreadcrumbLink url={url} theme={theme}>
+              <BreadcrumbLink url={url} theme={props.theme}>
                 {label}
               </BreadcrumbLink>
             )}
 
             {isLastItem && (
-              <LastItemStyled theme={theme}>
+              <LastItemStyled theme={props.theme}>
                 {label}
               </LastItemStyled>
             )}
@@ -38,7 +33,7 @@ const Breadcrumbs = ({
   </nav>
 )
 
-const BreadcrumbLink = ({url, children, theme}) => (
+const BreadcrumbLink = ({ url, children, theme }) => (
   <Link color='secondary' url={url} theme={theme}>{children}</Link>
 )
 

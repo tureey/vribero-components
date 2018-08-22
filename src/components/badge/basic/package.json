@@ -1,11 +1,10 @@
 {
-  "name": "@vribero/badge-basic--themed",
-  "version": "1.0.0",
+  "name": "vribero-component--badge-basic--themed",
+  "version": "1.0.5",
   "description": "Basic badge with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
-    "build": "rm -Rf ./lib && mkdir -p ./lib && npm run build:js",
-    "build:js": "../../../node_modules/.bin/babel --presets sui ./src --out-dir ./lib"
+    "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
   },
   "keywords": [
     "badge",
@@ -18,5 +17,14 @@
     "victorribero"
   ],
   "author": "Victor Ribero",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
 }

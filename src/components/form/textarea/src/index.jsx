@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { InputStyled } from './styles'
+import { TextareaStyled } from './styles'
 
-class Input extends Component {
+class Textarea extends Component {
   constructor(props) {
     super(props)
     this._handleOnChange = this._handleOnChange.bind(this)
@@ -12,7 +12,6 @@ class Input extends Component {
     const {
       id,
       name,
-      type,
       size,
       shape,
       appearance,
@@ -23,10 +22,9 @@ class Input extends Component {
     } = this.props;
 
     return (
-      <InputStyled
+      <TextareaStyled
         id={id}
         name={name}
-        type={type}
         value={value}
         size={size}
         shape={shape}
@@ -46,10 +44,9 @@ class Input extends Component {
   }
 }
 
-Input.propTypes = {
+Textarea.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   placeholder: PropTypes.string,
   shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
@@ -62,13 +59,12 @@ Input.propTypes = {
   theme: PropTypes.object,
 }
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   appearance: 'grey',
-  type: 'text',
   size: 'medium',
   shape: 'rounded',
   disabled: false,
   required: false,
 }
 
-export default Input
+export default Textarea

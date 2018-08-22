@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { InputFlatStyled } from './styles'
+import { InputStyled } from './styles'
 
 class Input extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Input extends Component {
     } = this.props;
 
     return (
-      <InputFlatStyled
+      <InputStyled
         id={id}
         name={name}
         type={type}
@@ -63,11 +63,10 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  appearance: 'white',
+  appearance: 'grey',
   type: 'text',
   size: 'medium',
   shape: 'rounded',
-  appearance: 'flat',
   disabled: false,
   required: false,
 }

@@ -12,7 +12,7 @@ const HelpTextStyled = styled.span`
   font-style: italic;
 
   + label {
-    margin-top: ${props => props.theme.spacing.marg.m};
+    margin-top: ${props => props.theme.spacing.marg.xl};
   }
 `
 

@@ -2,26 +2,44 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { AvatarBasicStyled } from './styles'
 
-const AvatarBasic = ({ url, ...props }) => (
-  <AvatarBasicStyled src={url} {...props} />
-)
+const AvatarBasic = ({
+  url,
+  size,
+  shape,
+  isBordered,
+  borderColor,
+  theme
+}) => (
+    <AvatarBasicStyled
+      role='status'
+      src={url}
+      size={size}
+      shape={shape}
+      isBordered={isBordered}
+      borderColor={borderColor}
+      theme={theme} />
+  )
 
 AvatarBasic.propTypes = {
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']).isRequired,
-  shape: PropTypes.oneOf(['square', 'rounded', 'circle']).isRequired,
+  url: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
   isBordered: PropTypes.bool,
   borderColor: PropTypes.oneOf([
-    'primary', 'secondary', 'grey', 'system'
-  ]).isRequired,
+    'primary',
+    'secondary',
+    'system',
+    'grey',
+  ]),
 
   theme: PropTypes.object,
 }
 
 AvatarBasic.defaultProps = {
   size: 'small',
-  shape: 'circle',
   isBordered: false,
   borderColor: 'grey',
+  shape: 'circle',
 };
 
 export default AvatarBasic

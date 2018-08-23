@@ -1,31 +1,47 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions'
-import Badge from '../../../src/components/badge/basic/src/index'
+import Avatar from '../../../src/components/avatar/basic/src/index'
 
 const stories = theme => (
-  storiesOf('Badge', module)
-  .add('Basic', () => (
-    <React.Fragment>
-      <span>small</span>&nbsp;
-      <Badge type='primary' size='small' theme={theme}>executive</Badge>
-      <Badge type='secondary' size='small' theme={theme}>executive</Badge>
-      <Badge type='success' size='small' theme={theme}>executive</Badge>
-      <Badge type='danger' size='small' theme={theme}>executive</Badge>
-      <br/><br/>
-      <span>medium</span>&nbsp;
-      <Badge type='primary' size='medium' theme={theme}>executive</Badge>
-      <Badge type='secondary' size='medium' theme={theme}>executive</Badge>
-      <Badge type='success' size='medium' theme={theme}>executive</Badge>
-      <Badge type='danger' size='medium' theme={theme}>executive</Badge>
-      <br/><br/>
-      <span>large</span>&nbsp;
-      <Badge type='primary' size='large' theme={theme}>executive</Badge>
-      <Badge type='secondary' size='large' theme={theme}>executive</Badge>
-      <Badge type='success' size='large' theme={theme}>executive</Badge>
-      <Badge type='danger' size='large' theme={theme}>executive</Badge>
-    </React.Fragment>
-  ))
+  storiesOf('Avatar', module)
+    .add('Basic', () => (
+      <React.Fragment>
+        <span>Without border</span>&nbsp;
+        <Avatar url={img_url} size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='large' theme={theme}>executive</Avatar>
+        <br /><br />
+        <span>with border grey</span>&nbsp;
+        <Avatar url={img_url} size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} size='large' theme={theme}>executive</Avatar>
+        <br /><br />
+        <span>with border primary</span>&nbsp;
+        <Avatar url={img_url} isBordered borderColor='primary' size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='secondary' size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='success' size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='danger' size='large' theme={theme}>executive</Avatar>
+        <br /><br />
+        <span>with border secondary</span>&nbsp;
+        <Avatar url={img_url} isBordered borderColor='primary' size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='secondary' size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='success' size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} isBordered borderColor='danger' size='large' theme={theme}>executive</Avatar>
+        <span>Shape square</span>&nbsp;
+        <Avatar url={img_url} shape='square' isBordered borderColor='primary' size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='square' isBordered borderColor='secondary' size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='square' isBordered borderColor='success' size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='square' isBordered borderColor='danger' size='large' theme={theme}>executive</Avatar>
+        <span>Shape rounded</span>&nbsp;
+        <Avatar url={img_url} shape='rounded' isBordered borderColor='primary' size='xsmall' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='rounded' isBordered borderColor='secondary' size='small' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='rounded' isBordered borderColor='success' size='medium' theme={theme}>executive</Avatar>
+        <Avatar url={img_url} shape='rounded' isBordered borderColor='danger' size='large' theme={theme}>executive</Avatar>
+      </React.Fragment>
+    ))
 )
 
-  export default stories
+export default stories

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { lighten, darken } from 'polished'
 
 const AvatarBasicStyled = styled.img`
   border: 1px solid;
@@ -9,63 +8,63 @@ const AvatarBasicStyled = styled.img`
   display: inline-block;
   transition: .15s ease all;
 
-  ${({size, theme}) =>
+  ${({ size, theme }) =>
     size === 'xsmall'
       ? `
         width: 2rem;
         height: 2rem;
       `
-    : size === 'medium'
-      ? `
+      : size === 'medium'
+        ? `
       width: 3rem;
       height: 3rem;
       `
-    :  size === 'large'
-      ? `
+        : size === 'large'
+          ? `
       width: 4rem;
       height: 4rem;
       `
-    :  size === 'large'
-      ? `
+          : size === 'large'
+            ? `
       width: 5rem;
       height: 5rem;
-      `:``
+      `: ``
   };
 
-  ${({shape}) =>
+  ${({ shape }) =>
     shape === 'square'
       ? `border-radius: 0;`
-    : shape === 'rounded'
-      ? `border-radius: 3px`
-    : shape === 'pill'
-      ? `border-radius: 500px` : ``
+      : shape === 'rounded'
+        ? `border-radius: 3px`
+        : shape === 'pill'
+          ? `border-radius: 500px` : ``
   };
 
-  ${({type, theme}) =>
+  ${({ type, theme }) =>
     type === 'primary'
       ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.primary};
       `:
-    type === 'secondary'
-      ? `
+      type === 'secondary'
+        ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.accent};
       `:
-    type === 'success'
-      ? `
+        type === 'success'
+          ? `
       color: white;
       fill: white;
       background-color: ${theme.colors.success};
       `:
-    type === 'danger'
-      ? `
+          type === 'danger'
+            ? `
       color: white;
       fill: white;
       background-color: ${theme.colors.danger};
-      `:``
+      `: ``
   };
 `
 export {

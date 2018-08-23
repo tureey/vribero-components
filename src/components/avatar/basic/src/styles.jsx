@@ -1,35 +1,34 @@
 import styled from 'styled-components'
 
 const AvatarBasicStyled = styled.img`
-  border: 1px solid;
-  border: ${props => props.isBordered ? '1px solid' : 'none'}
+  border: ${props => props.isBordered ? '1px solid' : 'none'};
   outline: none;
   box-sizing: border-box;
   display: inline-block;
   transition: .15s ease all;
 
-  ${({ size, theme }) =>
-    size === 'xsmall'
+  ${({ size }) =>
+    size === 'small'
       ? `
-        width: 2rem;
-        height: 2rem;
-      `
+        width: 1.5rem;
+        height: 1.5rem;
+        `
       : size === 'medium'
         ? `
-      width: 3rem;
-      height: 3rem;
-      `
+            width: 2.5rem;
+            height: 2.5rem;
+            `
         : size === 'large'
           ? `
-      width: 4rem;
-      height: 4rem;
-      `
-          : size === 'large'
+            width: 3.5rem;
+            height: 3.5rem;
+            `
+          : size === 'xlarge'
             ? `
-      width: 5rem;
-      height: 5rem;
-      `: ``
-  };
+            width: 5rem;
+            height: 5rem;
+            `: ``
+  }
 
   ${({ shape }) =>
     shape === 'square'
@@ -40,31 +39,15 @@ const AvatarBasicStyled = styled.img`
           ? `border-radius: 500px` : ``
   };
 
-  ${({ type, theme }) =>
-    type === 'primary'
-      ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.primary};
-      `:
-      type === 'secondary'
-        ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.accent};
-      `:
-        type === 'success'
-          ? `
-      color: white;
-      fill: white;
-      background-color: ${theme.colors.success};
-      `:
-          type === 'danger'
-            ? `
-      color: white;
-      fill: white;
-      background-color: ${theme.colors.danger};
-      `: ``
+  ${({ borderColor, theme }) =>
+    borderColor === 'primary'
+      ? `border-color: ${theme.colors.primary};` :
+      borderColor === 'secondary'
+        ? `border-color: ${theme.colors.accent};` :
+        borderColor === 'system'
+          ? `border-color: ${theme.colors.system};` :
+          borderColor === 'grey'
+            ? `border-color: ${theme.colors.grey};` : ``
   };
 `
 export {

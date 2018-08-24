@@ -30,7 +30,7 @@ const AvatarBasicStyled = styled.img`
       ? `border-radius: 0;`
       : shape === 'rounded'
         ? `border-radius: 3px`
-        : shape === 'pill'
+        : shape === 'circle'
           ? `border-radius: 500px` : ``
   };
 

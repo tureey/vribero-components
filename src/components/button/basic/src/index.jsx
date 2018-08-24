@@ -2,22 +2,31 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from './styles'
 
-const ButtonBasic = props => {
+const ButtonBasic = ({
+  link,
+  disabled,
+  onClick,
+  leftIcon,
+  rightIcon,
+  href,
+  theme,
+  children,
+}) => {
   return !link
     ? (
-      <ButtonBasicStyled {...props} disabled={props.disabled} onClick={props.onClick}>
+      <ButtonBasicStyled disabled={disabled} onClick={onClick} theme={theme}>
         <ButtonInnerStyled>
-          {props.leftIcon}
-          <span>{props.children}</span>
-          {props.rightIcon}
+          {leftIcon}
+          <span>{children}</span>
+          {rightIcon}
         </ButtonInnerStyled>
       </ButtonBasicStyled>
     ) : (
-      <LinkStyled {...props} href={props.href}>
+      <LinkStyled href={href}>
         <ButtonInnerStyled>
-          {props.leftIcon}
-          <span>{props.children}</span>
-          {props.rightIcon}
+          {leftIcon}
+          <span>{children}</span>
+          {rightIcon}
         </ButtonInnerStyled>
       </LinkStyled>
     )

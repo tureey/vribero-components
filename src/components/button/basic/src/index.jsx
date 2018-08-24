@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from './styles'
 
 const ButtonBasic = ({
+  size,
+  type,
+  importance,
   link,
   disabled,
   onClick,
@@ -14,23 +17,44 @@ const ButtonBasic = ({
 }) => {
   return !link
     ? (
-      <ButtonBasicStyled disabled={disabled} onClick={onClick} theme={theme}>
-        <ButtonInnerStyled>
-          {leftIcon}
-          <span>{children}</span>
-          {rightIcon}
-        </ButtonInnerStyled>
+      <ButtonBasicStyled
+        size={size}
+        type={type}
+        importance={importance}
+        disabled={disabled}
+        onClick={onClick}
+        theme={theme}>
+        <InnerButton
+          leftIcon={leftIcon}
+          rightIcon={rightIcon}
+          theme={theme}>
+          {children}
+        </InnerButton>
       </ButtonBasicStyled>
     ) : (
-      <LinkStyled href={href}>
-        <ButtonInnerStyled>
-          {leftIcon}
-          <span>{children}</span>
-          {rightIcon}
-        </ButtonInnerStyled>
+      <LinkStyled
+        size={size}
+        type={type}
+        importance={importance}
+        href={href}
+        theme={theme}>
+        <InnerButton
+          leftIcon={leftIcon}
+          rightIcon={rightIcon}
+          theme={theme}>
+          {children}
+        </InnerButton>
       </LinkStyled>
     )
 }
+
+const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
+  <ButtonInnerStyled theme={theme}>
+    {leftIcon}
+    <span>{children}</span>
+    {rightIcon}
+  </ButtonInnerStyled>
+)
 
 ButtonBasic.propTypes = {
   type: PropTypes.oneOf([

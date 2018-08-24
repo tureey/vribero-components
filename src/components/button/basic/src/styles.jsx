@@ -13,7 +13,6 @@ const ButtonBasicStyled = styled.button`
   padding-right: ${props => props.theme.spacing.padd.m};
   padding-left: ${props => props.theme.spacing.padd.m};
   user-select: none;
-  border: 1px solid;
   border-radius: 2px;
   box-sizing: border-box;
   display: inline-block;

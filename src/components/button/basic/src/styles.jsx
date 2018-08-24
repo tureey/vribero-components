@@ -26,10 +26,10 @@ const ButtonBasicStyled = styled.button`
   outline: 0;
   white-space: nowrap;
   transition: .15s ease all;
-  opacity: ${({disabled}) => disabled ? 0.3 : 1};
-  cursor: ${({disabled}) => disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${({ disabled }) => disabled ? 0.3 : 1};
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
 
-  ${({size, theme}) =>
+  ${({ size, theme }) =>
     size === 'small'
       ? `
         font-size: ${theme.font.size.s};
@@ -37,31 +37,31 @@ const ButtonBasicStyled = styled.button`
         padding-left: ${theme.spacing.padd.s};
         min-width: 32px;
       `
-    : size === 'medium'
-      ? `
+      : size === 'medium'
+        ? `
         font-size: ${theme.font.size.m};
         padding-right: ${theme.spacing.padd.m}  ;
         padding-left: ${theme.spacing.padd.m} ;
       `
-    :  size === 'large'
-      ? `
+        : size === 'large'
+          ? `
         font-size: ${theme.font.size.l};
         padding-right: ${theme.spacing.padd.l};
         padding-left: ${theme.spacing.padd.l};
         min-width: 48px;
-      ` :``
+      ` : ``
   };
 
-  ${({shape}) =>
+  ${({ shape }) =>
     shape === 'square'
       ? `border-radius: 0;`
-    : shape === 'rounded'
-      ? `border-radius: 3px`
-    : shape === 'pill'
-      ? `border-radius: 500px` : ``
+      : shape === 'rounded'
+        ? `border-radius: 3px`
+        : shape === 'pill'
+          ? `border-radius: 500px` : ``
   };
 
-  ${({type, importance, theme}) =>
+  ${({ type, importance, theme }) =>
     type === 'primary' && importance === 'primary'
       ? `
         color: white;
@@ -72,8 +72,8 @@ const ButtonBasicStyled = styled.button`
          border-color: ${darken(0.2, theme.colors.primary)} 
         }
       `:
-    type === 'primary' && importance === 'secondary'
-      ? `
+      type === 'primary' && importance === 'secondary'
+        ? `
         color: ${theme.colors.primary};
         background-color: transparent;
         border-color: ${theme.colors.primary};
@@ -81,8 +81,8 @@ const ButtonBasicStyled = styled.button`
           background-color: ${lighten(0.4, theme.colors.primary)}
         }
       `:
-    type === 'primary' && importance === 'terciary'
-      ? `
+        type === 'primary' && importance === 'terciary'
+          ? `
         color: ${theme.colors.primary};
         background-color: transparent;
         border-color: transparent;
@@ -90,8 +90,8 @@ const ButtonBasicStyled = styled.button`
           background-color: ${lighten(0.4, theme.colors.primary)}
         }
       `:
-    type === 'secondary' && importance === 'primary'
-      ? `
+          type === 'secondary' && importance === 'primary'
+            ? `
         color: white;
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
@@ -100,8 +100,8 @@ const ButtonBasicStyled = styled.button`
           border-color: ${darken(0.2, theme.colors.accent)} 
          }
       `:
-    type === 'secondary' && importance === 'secondary'
-      ? `
+            type === 'secondary' && importance === 'secondary'
+              ? `
         color: ${theme.colors.accent};
         background-color: transparent;
         border-color: ${theme.colors.accent};
@@ -109,15 +109,43 @@ const ButtonBasicStyled = styled.button`
           background-color: ${lighten(0.2, theme.colors.accent)}
         }
       `:
-    type === 'secondary' && importance === 'terciary'
-      ? `
+              type === 'secondary' && importance === 'terciary'
+                ? `
         color: ${theme.colors.accent};
         background-color: transparent;
         border-color: transparent;
         &:hover {
           background-color: ${lighten(0.2, theme.colors.accent)}
         }
-      `:``
+      `:
+                type === 'grey' && importance === 'primary'
+                  ? `
+        color: white;
+        background-color: ${theme.colors.grey};
+        border-color: ${theme.colors.grey};
+        &:hover {
+          background-color: ${darken(0.2, theme.colors.grey)}
+          border-color: ${darken(0.2, theme.colors.grey)} 
+         }
+      `:
+                  type === 'grey' && importance === 'secondary'
+                    ? `
+        color: ${theme.colors.grey};
+        background-color: transparent;
+        border-color: ${theme.colors.grey};
+        &:hover {
+          background-color: ${lighten(0.2, theme.colors.grey)}
+        }
+      `:
+                    type === 'grey' && importance === 'terciary'
+                      ? `
+        color: ${theme.colors.grey};
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: ${lighten(0.2, theme.colors.grey)}
+        }
+      `: ``
   };
 `
 const LinkStyled = styled.a`
@@ -146,10 +174,10 @@ const LinkStyled = styled.a`
   outline: 0;
   white-space: nowrap;
   transition: .15s ease all;
-  opacity: ${({disabled}) => disabled ? 0.3 : 1};
-  cursor: ${({disabled}) => disabled ? 'not-allowed' : 'pointer'};
+  opacity: ${({ disabled }) => disabled ? 0.3 : 1};
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   text-decoration: none;
-  ${({size, theme}) =>
+  ${({ size, theme }) =>
     size === 'small'
       ? `
         font-size: ${theme.font.size.s};
@@ -157,31 +185,31 @@ const LinkStyled = styled.a`
         padding-left: ${theme.spacing.padd.s};
         min-width: 32px;
       `
-    : size === 'medium'
-      ? `
+      : size === 'medium'
+        ? `
         font-size: ${theme.font.size.m};
         padding-right: ${theme.spacing.padd.m}  ;
         padding-left: ${theme.spacing.padd.m} ;
       `
-    :  size === 'large'
-      ? `
+        : size === 'large'
+          ? `
         font-size: ${theme.font.size.l};
         padding-right: ${theme.spacing.padd.l};
         padding-left: ${theme.spacing.padd.l};
         min-width: 48px;
-      ` :``
+      ` : ``
   };
 
-  ${({shape}) =>
+  ${({ shape }) =>
     shape === 'square'
       ? `border-radius: 0;`
-    : shape === 'rounded'
-      ? `border-radius: 3px`
-    : shape === 'pill'
-      ? `border-radius: 500px` : ``
+      : shape === 'rounded'
+        ? `border-radius: 3px`
+        : shape === 'pill'
+          ? `border-radius: 500px` : ``
   };
 
-  ${({type, importance, theme}) =>
+  ${({ type, importance, theme }) =>
     type === 'primary' && importance === 'primary'
       ? `
         color: white;
@@ -192,8 +220,8 @@ const LinkStyled = styled.a`
         border-color: ${darken(0.2, theme.colors.primary)} 
         }
       `:
-    type === 'primary' && importance === 'secondary'
-      ? `
+      type === 'primary' && importance === 'secondary'
+        ? `
         color: ${theme.colors.primary};
         background-color: transparent;
         border-color: ${theme.colors.primary};
@@ -201,8 +229,8 @@ const LinkStyled = styled.a`
           background-color: ${lighten(0.4, theme.colors.primary)}
         }
       `:
-    type === 'primary' && importance === 'terciary'
-      ? `
+        type === 'primary' && importance === 'terciary'
+          ? `
         color: ${theme.colors.primary};
         background-color: transparent;
         border-color: transparent;
@@ -210,8 +238,8 @@ const LinkStyled = styled.a`
           background-color: ${lighten(0.4, theme.colors.primary)}
         }
       `:
-    type === 'secondary' && importance === 'primary'
-      ? `
+          type === 'secondary' && importance === 'primary'
+            ? `
         color: white;
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
@@ -220,8 +248,8 @@ const LinkStyled = styled.a`
           border-color: ${darken(0.2, theme.colors.accent)} 
          }
       `:
-    type === 'secondary' && importance === 'secondary'
-      ? `
+            type === 'secondary' && importance === 'secondary'
+              ? `
         color: ${theme.colors.accent};
         background-color: transparent;
         border-color: ${theme.colors.accent};
@@ -229,15 +257,15 @@ const LinkStyled = styled.a`
           background-color: ${lighten(0.2, theme.colors.accent)}
         }
       `:
-    type === 'secondary' && importance === 'terciary'
-      ? `
+              type === 'secondary' && importance === 'terciary'
+                ? `
         color: ${theme.colors.accent};
         background-color: transparent;
         border-color: transparent;
         &:hover {
           background-color: ${lighten(0.2, theme.colors.accent)}
         }
-      `:``
+      `: ``
   };
 `
 

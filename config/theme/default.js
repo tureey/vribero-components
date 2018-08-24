@@ -1,19 +1,20 @@
 const theme = {
   colors: {
-    system: '#463F3A',
-    primary: '#8A817C',
+    system: '#1a1a1a',
+    primary: '#03a87c',
     grey_dark: '#BCB8B1',
     grey: '#EDEAE6',
     grey_light: '#F7F6F4',
-    accent: '#E0AFA0',
+    accent: '#010101',
 
     success: '#00B16A',
     danger: '#EF4836',
 
-    fb: '',
-    ig: '',
-    tw: '',
-    in: '',
+    fb: '#29487d',
+    ig: '#e95950',
+    tw: '#55acee',
+    in: '#007bb5',
+    wu: '#4dc247',
   },
   spacing: {
     padd: {

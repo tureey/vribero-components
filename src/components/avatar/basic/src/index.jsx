@@ -22,8 +22,8 @@ const AvatarBasic = ({
 
 AvatarBasic.propTypes = {
   url: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']).isRequired,
-  shape: PropTypes.oneOf(['square', 'rounded', 'pill']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  shape: PropTypes.oneOf(['square', 'rounded', 'circle']).isRequired,
   isBordered: PropTypes.bool,
   borderColor: PropTypes.oneOf([
     'primary',

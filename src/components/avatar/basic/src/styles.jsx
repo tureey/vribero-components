@@ -22,11 +22,6 @@ const AvatarBasicStyled = styled.img`
           ? `
             width: 3.5rem;
             height: 3.5rem;
-            `
-          : size === 'xlarge'
-            ? `
-            width: 5rem;
-            height: 5rem;
             `: ``
   }
 

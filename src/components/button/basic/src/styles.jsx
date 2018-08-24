@@ -77,8 +77,8 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: ${theme.colors.primary};
         &:hover {
-          border-color: ${darken(0.4, theme.colors.primary)}
-          color: ${darken(0.4, theme.colors.primary)}
+          border-color: ${darken(0.2, theme.colors.primary)}
+          color: ${darken(0.2, theme.colors.primary)}
         }
       `:
         type === 'primary' && importance === 'terciary'
@@ -87,7 +87,7 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          color: ${darken(0.4, theme.colors.primary)}
+          color: ${darken(0.2, theme.colors.primary)}
         }
       `:
           type === 'secondary' && importance === 'primary'
@@ -106,7 +106,7 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: ${theme.colors.accent};
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.accent)}
+          background-color: ${darken(0.2, theme.colors.accent)}
         }
       `:
               type === 'secondary' && importance === 'terciary'
@@ -115,7 +115,7 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.accent)}
+          background-color: ${darken(0.2, theme.colors.accent)}
         }
       `:
                 type === 'grey' && importance === 'primary'
@@ -134,7 +134,8 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: ${theme.colors.grey};
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.grey)}
+          background-color: ${darken(0.2, theme.colors.grey)}
+          color: ${darken(0.2, theme.colors.grey)}
         }
       `:
                     type === 'grey' && importance === 'terciary'
@@ -143,7 +144,7 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.grey)}
+          color: ${darken(0.2, theme.colors.grey)}
         }
       `: ``
   };

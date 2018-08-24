@@ -10,10 +10,7 @@ const HelpTextStyled = styled.span`
   letter-spacing: 0.25px;
   margin-top: ${props => props.theme.spacing.marg.s};
   font-style: italic;
-
-  + label {
-    margin-top: ${props => props.theme.spacing.marg.xl};
-  }
+  margin-bottom: ${props => props.theme.spacing.marg.s};
 `
 
 export {

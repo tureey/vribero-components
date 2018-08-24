@@ -6,7 +6,7 @@ const theme = {
     grey: '#EDEAE6',
     grey_light: '#F7F6F4',
     accent: '#E0AFA0',
-    
+
     success: '#00B16A',
     danger: '#EF4836',
 
@@ -46,7 +46,7 @@ const theme = {
     size: {
       xs: '12px',
       s: '14px',
-      m: '16px' ,
+      m: '16px',
       l: '18px',
       xl: '21px',
       xxl: '27px',

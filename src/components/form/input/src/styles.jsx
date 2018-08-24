@@ -15,10 +15,6 @@ const InputStyled = styled.input`
   &:focus {
     background: ${props => darken(0.15, props.theme.colors.grey)};
   }
-  
-  & + label {
-    margin-top: ${props => props.theme.spacing.marg.xl};
-  }
 
   ${props =>
     props.appearance === 'white'

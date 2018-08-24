@@ -78,7 +78,8 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: ${theme.colors.primary};
         &:hover {
-          background-color: ${lighten(0.4, theme.colors.primary)}
+          border-color: ${darken(0.4, theme.colors.primary)}
+          color: ${darken(0.4, theme.colors.primary)}
         }
       `:
         type === 'primary' && importance === 'terciary'
@@ -87,7 +88,7 @@ const ButtonBasicStyled = styled.button`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          background-color: ${lighten(0.4, theme.colors.primary)}
+          color: ${darken(0.4, theme.colors.primary)}
         }
       `:
           type === 'secondary' && importance === 'primary'
@@ -151,17 +152,11 @@ const ButtonBasicStyled = styled.button`
 const LinkStyled = styled.a`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
   background: none;
-  cursor: pointer;
-  outline: none;
-  min-width: 40px;
-  font-size: 15px;
-  padding: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: ${props => props.theme.spacing.padd.m};
   padding-left: ${props => props.theme.spacing.padd.m};
   user-select: none;
-  border: 1px solid;
   border-radius: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -216,8 +211,8 @@ const LinkStyled = styled.a`
         background-color: ${theme.colors.primary};
         border-color: ${theme.colors.primary};
         &:hover {
-        background-color: ${darken(0.2, theme.colors.primary)}
-        border-color: ${darken(0.2, theme.colors.primary)} 
+          background-color: ${darken(0.2, theme.colors.primary)}
+          border-color: ${darken(0.2, theme.colors.primary)} 
         }
       `:
       type === 'primary' && importance === 'secondary'
@@ -226,7 +221,8 @@ const LinkStyled = styled.a`
         background-color: transparent;
         border-color: ${theme.colors.primary};
         &:hover {
-          background-color: ${lighten(0.4, theme.colors.primary)}
+          border-color: ${darken(0.2, theme.colors.primary)}
+          color: ${darken(0.2, theme.colors.primary)}
         }
       `:
         type === 'primary' && importance === 'terciary'
@@ -235,7 +231,7 @@ const LinkStyled = styled.a`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          background-color: ${lighten(0.4, theme.colors.primary)}
+          color: ${darken(0.2, theme.colors.primary)}
         }
       `:
           type === 'secondary' && importance === 'primary'
@@ -254,7 +250,8 @@ const LinkStyled = styled.a`
         background-color: transparent;
         border-color: ${theme.colors.accent};
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.accent)}
+          border-color: ${darken(0.2, theme.colors.accent)}
+          color: ${darken(0.2, theme.colors.accent)}
         }
       `:
               type === 'secondary' && importance === 'terciary'
@@ -263,7 +260,7 @@ const LinkStyled = styled.a`
         background-color: transparent;
         border-color: transparent;
         &:hover {
-          background-color: ${lighten(0.2, theme.colors.accent)}
+          color: ${lighten(0.2, theme.colors.accent)}
         }
       `: ``
   };

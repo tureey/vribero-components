@@ -1,11 +1,11 @@
 const theme = {
   colors: {
     system: '#1a1a1a',
-    primary: '#03a87c',
+    primary: 'red',
     grey_dark: '#BCB8B1',
     grey: '#EDEAE6',
     grey_light: '#F7F6F4',
-    accent: '#010101',
+    accent: '#EDEAE6',
 
     success: '#00B16A',
     danger: '#EF4836',

@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import { lighten, darken } from 'polished'
+import { darken } from 'polished'
 
 const ButtonBasicStyled = styled.button`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
   background: none;
-  cursor: pointer;
-  outline: none;
   min-width: 40px;
   font-size: 15px;
   padding-top: 0;
@@ -28,130 +26,15 @@ const ButtonBasicStyled = styled.button`
   opacity: ${({ disabled }) => disabled ? 0.3 : 1};
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
 
-  ${({ size, theme }) =>
-    size === 'small'
-      ? `
-        font-size: ${theme.font.size.s};
-        padding-right: ${theme.spacing.padd.s};
-        padding-left: ${theme.spacing.padd.s};
-        min-width: 32px;
-      `
-      : size === 'medium'
-        ? `
-        font-size: ${theme.font.size.m};
-        padding-right: ${theme.spacing.padd.m}  ;
-        padding-left: ${theme.spacing.padd.m} ;
-      `
-        : size === 'large'
-          ? `
-        font-size: ${theme.font.size.l};
-        padding-right: ${theme.spacing.padd.l};
-        padding-left: ${theme.spacing.padd.l};
-        min-width: 48px;
-      ` : ``
-  };
-
-  ${({ shape }) =>
-    shape === 'square'
-      ? `border-radius: 0;`
-      : shape === 'rounded'
-        ? `border-radius: 3px`
-        : shape === 'pill'
-          ? `border-radius: 500px` : ``
-  };
-
-  ${({ type, importance, theme }) =>
-    type === 'primary' && importance === 'primary'
-      ? `
-        color: white;
-        background-color: ${theme.colors.primary};
-        border-color: ${theme.colors.primary};
-        &:hover {
-         background-color: ${darken(0.2, theme.colors.primary)}
-         border-color: ${darken(0.2, theme.colors.primary)} 
-        }
-      `:
-      type === 'primary' && importance === 'secondary'
-        ? `
-        color: ${theme.colors.primary};
-        background-color: transparent;
-        border-color: ${theme.colors.primary};
-        &:hover {
-          border-color: ${darken(0.2, theme.colors.primary)}
-          color: ${darken(0.2, theme.colors.primary)}
-        }
-      `:
-        type === 'primary' && importance === 'terciary'
-          ? `
-        color: ${theme.colors.primary};
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-          color: ${darken(0.2, theme.colors.primary)}
-        }
-      `:
-          type === 'secondary' && importance === 'primary'
-            ? `
-        color: white;
-        background-color: ${theme.colors.accent};
-        border-color: ${theme.colors.accent};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.accent)}
-          border-color: ${darken(0.2, theme.colors.accent)} 
-         }
-      `:
-            type === 'secondary' && importance === 'secondary'
-              ? `
-        color: ${theme.colors.accent};
-        background-color: transparent;
-        border-color: ${theme.colors.accent};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.accent)}
-        }
-      `:
-              type === 'secondary' && importance === 'terciary'
-                ? `
-        color: ${theme.colors.accent};
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.accent)}
-        }
-      `:
-                type === 'grey' && importance === 'primary'
-                  ? `
-        color: white;
-        background-color: ${theme.colors.grey};
-        border-color: ${theme.colors.grey};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.grey)}
-          border-color: ${darken(0.2, theme.colors.grey)} 
-         }
-      `:
-                  type === 'grey' && importance === 'secondary'
-                    ? `
-        color: ${theme.colors.grey};
-        background-color: transparent;
-        border-color: ${theme.colors.grey};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.grey)}
-          color: ${darken(0.2, theme.colors.grey)}
-        }
-      `:
-                    type === 'grey' && importance === 'terciary'
-                      ? `
-        color: ${theme.colors.grey};
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-          color: ${darken(0.2, theme.colors.grey)}
-        }
-      `: ``
-  };
+  ${({ shape }) => stylesShape(shape)};
+  ${({ size, theme }) => sylesSize(size, theme)};
+  ${({ type, importance, theme }) => stylesColors(type, importance, theme)};
 `
 const LinkStyled = styled.a`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
   background: none;
+  min-width: 40px;
+  font-size: 15px;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: ${props => props.theme.spacing.padd.m};
@@ -172,105 +55,99 @@ const LinkStyled = styled.a`
   opacity: ${({ disabled }) => disabled ? 0.3 : 1};
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   text-decoration: none;
-  ${({ size, theme }) =>
-    size === 'small'
-      ? `
-        font-size: ${theme.font.size.s};
-        padding-right: ${theme.spacing.padd.s};
-        padding-left: ${theme.spacing.padd.s};
-        min-width: 32px;
-      `
-      : size === 'medium'
-        ? `
-        font-size: ${theme.font.size.m};
-        padding-right: ${theme.spacing.padd.m}  ;
-        padding-left: ${theme.spacing.padd.m} ;
-      `
-        : size === 'large'
-          ? `
-        font-size: ${theme.font.size.l};
-        padding-right: ${theme.spacing.padd.l};
-        padding-left: ${theme.spacing.padd.l};
-        min-width: 48px;
-      ` : ``
-  };
 
-  ${({ shape }) =>
-    shape === 'square'
-      ? `border-radius: 0;`
-      : shape === 'rounded'
-        ? `border-radius: 3px`
-        : shape === 'pill'
-          ? `border-radius: 500px` : ``
-  };
-
-  ${({ type, importance, theme }) =>
-    type === 'primary' && importance === 'primary'
-      ? `
-        color: white;
-        background-color: ${theme.colors.primary};
-        border-color: ${theme.colors.primary};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.primary)}
-          border-color: ${darken(0.2, theme.colors.primary)} 
-        }
-      `:
-      type === 'primary' && importance === 'secondary'
-        ? `
-        color: ${theme.colors.primary};
-        background-color: transparent;
-        border-color: ${theme.colors.primary};
-        &:hover {
-          border-color: ${darken(0.2, theme.colors.primary)}
-          color: ${darken(0.2, theme.colors.primary)}
-        }
-      `:
-        type === 'primary' && importance === 'terciary'
-          ? `
-        color: ${theme.colors.primary};
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-          color: ${darken(0.2, theme.colors.primary)}
-        }
-      `:
-          type === 'secondary' && importance === 'primary'
-            ? `
-        color: white;
-        background-color: ${theme.colors.accent};
-        border-color: ${theme.colors.accent};
-        &:hover {
-          background-color: ${darken(0.2, theme.colors.accent)}
-          border-color: ${darken(0.2, theme.colors.accent)} 
-         }
-      `:
-            type === 'secondary' && importance === 'secondary'
-              ? `
-        color: ${theme.colors.accent};
-        background-color: transparent;
-        border-color: ${theme.colors.accent};
-        &:hover {
-          border-color: ${darken(0.2, theme.colors.accent)}
-          color: ${darken(0.2, theme.colors.accent)}
-        }
-      `:
-              type === 'secondary' && importance === 'terciary'
-                ? `
-        color: ${theme.colors.accent};
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-          color: ${lighten(0.2, theme.colors.accent)}
-        }
-      `: ``
-  };
-`
+  ${({ shape }) => stylesShape(shape)};
+  ${({ size, theme }) => sylesSize(size, theme)};
+  ${({ type, importance, theme }) => stylesColors(type, importance, theme)};
+ `
 
 const ButtonInnerStyled = styled.span`
   align-items: center;
   display: inline-flex;
   height: 100%;
   pointer-events: none;
+
+  img:first-child,
+  i:first-child,
+  svg:first-child {
+    margin-right: ${props => props.theme.spacing.marg.s};
+  }
+`
+
+const stylesShape = shape =>
+  shape === 'square'
+    ? `border-radius: 0;`
+    : shape === 'rounded'
+      ? `border-radius: 3px`
+      : shape === 'pill'
+        ? `border-radius: 500px` : ``
+
+const sylesSize = (size, theme) =>
+  size === 'small' ? `
+    font-size: ${theme.font.size.s};
+    padding-right: ${theme.spacing.padd.s};
+    padding-left: ${theme.spacing.padd.s};
+    min-width: 32px;
+  `
+    : size === 'medium' ? `
+    font-size: ${theme.font.size.m};
+    padding-right: ${theme.spacing.padd.m}  ;
+    padding-left: ${theme.spacing.padd.m} ;
+  `
+      : size === 'large' ? `
+    font-size: ${theme.font.size.l};
+    padding-right: ${theme.spacing.padd.l};
+    padding-left: ${theme.spacing.padd.l};
+    min-width: 48px;
+  ` : ``
+
+const stylesColors = (type, importance, theme) =>
+  type === 'primary' && importance === 'primary'
+    ? `${stylesImportancePrimaryOf(theme.colors.primary)}`
+    : type === 'primary' && importance === 'secondary'
+      ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
+      : type === 'primary' && importance === 'terciary'
+        ? `${stylesImportanceTerciaryOf(theme.colors.primary)}`
+        : type === 'secondary' && importance === 'primary'
+          ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
+          : type === 'secondary' && importance === 'secondary'
+            ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
+            : type === 'secondary' && importance === 'terciary'
+              ? `${stylesImportanceTerciaryOf(theme.colors.accent)}`
+              : ``
+
+const colorAndFill = color => `
+  color: ${color}
+  fill: ${color}
+`
+
+const stylesImportancePrimaryOf = color => `
+  ${colorAndFill('white')}
+  background-color: ${color};
+  border-color: ${color};
+  &:hover {
+    background-color: ${darken(0.05, color)}
+    border-color: ${darken(0.05, color)} 
+  }
+`
+
+const stylesImportanceSecondaryOf = color => `
+  ${colorAndFill(color)}
+  background-color: transparent;
+  border-color: ${color};
+  &:hover {
+    border-color: ${darken(0.15, color)}
+    ${colorAndFill(darken(0.15, color))}
+  }
+`
+
+const stylesImportanceTerciaryOf = color => `
+  ${colorAndFill(color)}
+  background-color: transparent;
+  border-color: transparent;
+  &:hover {
+    ${colorAndFill(darken(0.15, color))}
+  }
 `
 
 export {

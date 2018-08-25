@@ -8,18 +8,23 @@ const AvatarBasicStyled = styled.img`
   transition: .15s ease all;
 
   ${({ size }) =>
-    size === 'small'
+    size === 'xsmall'
       ? `
-        width: 1.5rem;
-        height: 1.5rem;
-        `
-      : size === 'medium'
+    width: 1.5rem;
+    height: 1.5rem;
+    `
+      : size === 'small'
         ? `
+        width: 2rem;
+        height: 2rem;
+        `
+        : size === 'medium'
+          ? `
             width: 2.5rem;
             height: 2.5rem;
             `
-        : size === 'large'
-          ? `
+          : size === 'large'
+            ? `
             width: 3.5rem;
             height: 3.5rem;
             `: ``

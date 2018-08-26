@@ -7,9 +7,12 @@ const LinkStyled = styled.a`
   font-weight: ${props => props.theme.font.size.s};
   transition: .15s ease all;
   cursor: pointer;
-  text-decoration: ${props => props.underlined ? 'underlined' : 'none'};
 
-  ${({color, theme}) =>
+  :hover {
+    text-decoration: underline;
+  }
+
+  ${({ color, theme }) =>
     color === 'primary'
       ? `
         color: ${theme.colors.primary}
@@ -17,14 +20,14 @@ const LinkStyled = styled.a`
           color: ${darken(0.2, theme.colors.primary)}
         }
       `
-    : color === 'secondary'
-      ? `
+      : color === 'secondary'
+        ? `
         color: ${theme.colors.accent}
         &:hover {
           color: ${darken(0.2, theme.colors.accent)}
         }
       `
-      : ``
+        : ``
   };
 `
 export {

@@ -7,6 +7,7 @@ const LinkStyled = styled.a`
   font-weight: ${props => props.theme.font.weight.m};
   transition: .15s ease all;
   cursor: pointer;
+  text-decoration: none;
 
   :hover {
     text-decoration: underline;

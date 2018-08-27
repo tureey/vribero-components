@@ -4,7 +4,7 @@ import { darken } from 'polished'
 const LinkStyled = styled.a`
   font-family: ${props => props.theme.font.family.main};
   font-size: ${props => props.theme.font.size.m};
-  font-weight: ${props => props.theme.font.size.s};
+  font-weight: ${props => props.theme.font.weight.m};
   transition: .15s ease all;
   cursor: pointer;
 

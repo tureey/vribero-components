@@ -4,6 +4,7 @@ import { LinkStyled } from './styles'
 
 const Link = ({ props }) => (
   <LinkStyled
+    color={color}
     href={props.url}
     target={props.target}
     theme={props.theme}

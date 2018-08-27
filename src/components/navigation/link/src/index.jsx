@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { LinkStyled } from './styles'
 
-const Link = props => (
+const Link = ({ url, target, theme, children, ...other }) => (
   <LinkStyled
-    href={props.url}
-    target={props.target}
-    theme={props.theme}
-    {...props}
+    href={url}
+    target={target}
+    theme={theme}
+    {...other}
   >
-    {props.children}
+    {children}
   </LinkStyled>
 )
 
@@ -24,7 +24,7 @@ Link.propTypes = {
 }
 
 Link.defaultProps = {
-  color: 'secondary',
+  color: 'primary',
   underlined: false,
   target: '_blank'
 }

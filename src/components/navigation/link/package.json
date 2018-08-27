@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--navigation-link--themed",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Basic link object with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

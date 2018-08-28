@@ -26,6 +26,7 @@ const BreadcrumbsElementStyled = styled.li`
 const LastItemStyled = styled.span`
   color: ${props => props.theme.colors.grey_dark};
   font-weight: ${props => props.theme.font.weight.s};
+  font-size: ${props => props.theme.font.size.s};
   font-family: ${props => props.theme.font.family.main};
 `;
 

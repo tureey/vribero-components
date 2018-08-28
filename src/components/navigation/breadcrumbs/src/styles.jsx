@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { lighten, darken } from 'polished'
+import styled from "styled-components";
+import { lighten, darken } from "polished";
 
 const BreadcrumbsListStyled = styled.ul`
   list-style: none;
@@ -8,30 +8,25 @@ const BreadcrumbsListStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   line-hight: 1.25;
-`
+`;
 
 const BreadcrumbsElementStyled = styled.li`
   margin-right: ${props => props.theme.spacing.marg.m};
-  
+
   &:not(:first-child) {
     &:before {
-      content: '>';
+      content: ">";
       margin-right: ${props => props.theme.spacing.marg.m};
       color: ${props => props.theme.colors.grey_dark};
       font-weight: ${props => props.theme.font.weight.l};
     }
   }
-`
+`;
 
 const LastItemStyled = styled.span`
   color: ${props => props.theme.colors.grey_dark};
   font-weight: ${props => props.theme.font.weight.s};
   font-family: ${props => props.theme.font.family.main};
-`
+`;
 
-
-export {
-  BreadcrumbsListStyled,
-  BreadcrumbsElementStyled,
-  LastItemStyled,
-}
+export { BreadcrumbsListStyled, BreadcrumbsElementStyled, LastItemStyled };

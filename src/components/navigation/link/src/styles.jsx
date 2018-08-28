@@ -1,36 +1,26 @@
-import styled from 'styled-components'
-import { darken } from 'polished'
+import styled from "styled-components";
+import { darken } from "polished";
 
 const LinkStyled = styled.a`
   font-family: ${props => props.theme.font.family.main};
-  font-size: ${props => props.theme.font.size.m};
+  font-size: ${props => props.theme.font.size.s};
   font-weight: ${props => props.theme.font.weight.m};
-  transition: .15s ease all;
+  transition: 0.15s ease all;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: ${props => (props.isUnderlined ? "underline" : "none")};
 
   :hover {
     text-decoration: underline;
   }
 
   ${({ color, theme }) =>
-    color === 'primary'
+    color === "primary"
       ? `
         color: ${theme.colors.primary}
         &:hover {
           color: ${darken(0.2, theme.colors.primary)}
         }
       `
-      : color === 'secondary'
-        ? `
-        color: ${theme.colors.accent}
-        &:hover {
-          color: ${darken(0.2, theme.colors.accent)}
-        }
-      `
-        : ``
-  };
-`
-export {
-  LinkStyled
-}
+      : ``};
+`;
+export { LinkStyled };

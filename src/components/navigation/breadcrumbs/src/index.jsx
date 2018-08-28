@@ -5,7 +5,7 @@ import {
   BreadcrumbsElementStyled,
   LastItemStyled
 } from "./styles";
-import Link from "../../link/src";
+import Link from "vribero-component--navigation-link--themed/lib";
 
 const Breadcrumbs = props => (
   <nav aria-label="breadcrumb" role="navigation">

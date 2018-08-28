@@ -26,5 +26,8 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {
+    "vribero-component--navigation-link--themed": "^1.0.11"
   }
 }

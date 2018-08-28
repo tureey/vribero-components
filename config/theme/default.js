@@ -60,12 +60,6 @@ const theme = {
       l: 700,
       xl: 900,
     },
-    lineHeight: {
-      s: '1',
-      m: '1.25',
-      l: '1.5',
-      xl: '1.75',
-    },
     family: {
       main: '"Raleway", Open-sans, sans-serif'
     }

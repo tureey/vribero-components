@@ -7,7 +7,7 @@ const BreadcrumbsListStyled = styled.ul`
   padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  line-hight: ${props => props.theme.font.lineHeight.m};
+  line-hight: 1.25;
 `
 
 const BreadcrumbsElementStyled = styled.li`

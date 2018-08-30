@@ -16,7 +16,12 @@ const Breadcrumbs = props => (
         return (
           <BreadcrumbsElementStyled theme={props.theme} key={index}>
             {!isLastItem && (
-              <BreadcrumbLink url={url} theme={props.theme}>
+              <BreadcrumbLink
+                color={props.color}
+                target={props.target}
+                url={url}
+                theme={props.theme}
+              >
                 {label}
               </BreadcrumbLink>
             )}
@@ -31,13 +36,15 @@ const Breadcrumbs = props => (
   </nav>
 );
 
-const BreadcrumbLink = ({ url, children, theme }) => (
-  <Link color="secondary" url={url} theme={theme}>
+const BreadcrumbLink = ({ color, target, url, children, theme }) => (
+  <Link color={color} target={target} url={url} theme={theme}>
     {children}
   </Link>
 );
 
 Breadcrumbs.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary"]),
+  target: PropTypes.oneOf(["_self", "_blank"]),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -46,6 +53,11 @@ Breadcrumbs.propTypes = {
   ).isRequired,
 
   theme: PropTypes.object
+};
+
+Breadcrumbs.defaultProps = {
+  color: "primary",
+  target: "_self"
 };
 
 export default Breadcrumbs;

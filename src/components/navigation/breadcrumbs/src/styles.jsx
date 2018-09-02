@@ -18,7 +18,7 @@ const BreadcrumbsElementStyled = styled.li`
       content: ">";
       margin-right: ${props => props.theme.spacing.marg.m};
       color: ${props => props.theme.colors.grey_dark};
-      font-weight: ${props => props.theme.font.weight.l};
+      font-weight: ${props => props.theme.font.weight.s};
     }
   }
 `;

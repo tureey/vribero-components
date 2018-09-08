@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { darken } from "polished";
 
 const TextareaStyled = styled.textarea`
+  min-width: 100%;
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 150px;
   box-sizing: border-box;
   border: none;
   color: ${props => props.theme.colors.system};

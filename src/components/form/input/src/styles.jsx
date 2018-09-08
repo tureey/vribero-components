@@ -13,8 +13,13 @@ const InputStyled = styled.input`
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
     0 1px 2px rgba(102, 119, 136, 0.3);
   background-color: ${props => props.theme.colors.grey_light};
+
   &:focus {
     background: ${props => darken(0.15, props.theme.colors.grey_light)};
+  }
+
+  & + label {
+    margin-top: ${props => props.theme.spacing.marg.xl};
   }
 
   ${props =>

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { darken } from 'polished'
+import styled from "styled-components";
+import { darken } from "polished";
 
 const ButtonBasicStyled = styled.button`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
@@ -22,14 +22,14 @@ const ButtonBasicStyled = styled.button`
   min-width: 40px;
   outline: 0;
   white-space: nowrap;
-  transition: .15s ease all;
-  opacity: ${({ disabled }) => disabled ? 0.3 : 1};
-  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  transition: 0.15s ease all;
+  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   ${({ shape }) => stylesShape(shape)};
   ${({ size, theme }) => sylesSize(size, theme)};
-  ${({ type, importance, theme }) => stylesColors(type, importance, theme)};
-`
+  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
+`;
 const LinkStyled = styled.a`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
   background: none;
@@ -51,15 +51,15 @@ const LinkStyled = styled.a`
   min-width: 40px;
   outline: 0;
   white-space: nowrap;
-  transition: .15s ease all;
-  opacity: ${({ disabled }) => disabled ? 0.3 : 1};
-  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  transition: 0.15s ease all;
+  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   text-decoration: none;
 
   ${({ shape }) => stylesShape(shape)};
   ${({ size, theme }) => sylesSize(size, theme)};
-  ${({ type, importance, theme }) => stylesColors(type, importance, theme)};
- `
+  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
+`;
 
 const ButtonInnerStyled = styled.span`
   align-items: center;
@@ -72,64 +72,69 @@ const ButtonInnerStyled = styled.span`
   svg:first-child {
     margin-right: ${props => props.theme.spacing.marg.s};
   }
-`
+`;
 
 const stylesShape = shape =>
-  shape === 'square'
+  shape === "square"
     ? `border-radius: 0;`
-    : shape === 'rounded'
+    : shape === "rounded"
       ? `border-radius: 3px`
-      : shape === 'pill'
-        ? `border-radius: 500px` : ``
+      : shape === "pill"
+        ? `border-radius: 500px`
+        : ``;
 
 const sylesSize = (size, theme) =>
-  size === 'small' ? `
+  size === "small"
+    ? `
     font-size: ${theme.font.size.s};
     padding-right: ${theme.spacing.padd.s};
     padding-left: ${theme.spacing.padd.s};
     min-width: 32px;
   `
-    : size === 'medium' ? `
+    : size === "medium"
+      ? `
     font-size: ${theme.font.size.m};
     padding-right: ${theme.spacing.padd.m}  ;
     padding-left: ${theme.spacing.padd.m} ;
   `
-      : size === 'large' ? `
+      : size === "large"
+        ? `
     font-size: ${theme.font.size.l};
     padding-right: ${theme.spacing.padd.l};
     padding-left: ${theme.spacing.padd.l};
     min-width: 48px;
-  ` : ``
+  `
+        : ``;
 
-const stylesColors = (type, importance, theme) =>
-  type === 'primary' && importance === 'primary'
+const stylesColors = (color, importance, theme) =>
+  color === "primary" && importance === "primary"
     ? `${stylesImportancePrimaryOf(theme.colors.primary)}`
-    : type === 'primary' && importance === 'secondary'
+    : color === "primary" && importance === "secondary"
       ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
-      : type === 'primary' && importance === 'terciary'
+      : color === "primary" && importance === "terciary"
         ? `${stylesImportanceTerciaryOf(theme.colors.primary)}`
-        : type === 'secondary' && importance === 'primary'
+        : color === "secondary" && importance === "primary"
           ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
-          : type === 'secondary' && importance === 'secondary'
+          : color === "secondary" && importance === "secondary"
             ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
-            : type === 'secondary' && importance === 'terciary'
+            : color === "secondary" && importance === "terciary"
               ? `${stylesImportanceTerciaryOf(theme.colors.accent)}`
-              : ``
+              : ``;
 
 const colorAndFill = color => `
   color: ${color}
   fill: ${color}
-`
+`;
 
 const stylesImportancePrimaryOf = color => `
-  ${colorAndFill('white')}
+  ${colorAndFill("white")}
   background-color: ${color};
   border-color: ${color};
   &:hover {
     background-color: ${darken(0.05, color)}
     border-color: ${darken(0.05, color)} 
   }
-`
+`;
 
 const stylesImportanceSecondaryOf = color => `
   ${colorAndFill(color)}
@@ -139,7 +144,7 @@ const stylesImportanceSecondaryOf = color => `
     border-color: ${darken(0.15, color)}
     ${colorAndFill(darken(0.15, color))}
   }
-`
+`;
 
 const stylesImportanceTerciaryOf = color => `
   ${colorAndFill(color)}
@@ -148,10 +153,6 @@ const stylesImportanceTerciaryOf = color => `
   &:hover {
     ${colorAndFill(darken(0.15, color))}
   }
-`
+`;
 
-export {
-  ButtonBasicStyled,
-  LinkStyled,
-  ButtonInnerStyled,
-}
+export { ButtonBasicStyled, LinkStyled, ButtonInnerStyled };

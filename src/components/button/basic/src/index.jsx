@@ -5,6 +5,7 @@ import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from "./styles";
 const ButtonBasic = ({
   size,
   type,
+  color,
   importance,
   link,
   disabled,

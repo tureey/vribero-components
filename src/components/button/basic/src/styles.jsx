@@ -43,7 +43,7 @@ const LinkStyled = styled.a`
   display: inline-block;
   font-family: ${props => props.theme.font.family.main};
   font-size: ${props => props.theme.font.size.m};
-  font-weight: 300;
+  font-weight: ${props => props.theme.font.weight.m};
   height: 40px;
   line-height: normal;
   min-width: 40px;

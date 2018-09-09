@@ -3,23 +3,21 @@ import { darken } from "polished";
 
 const ButtonBasicStyled = styled.button`
   border: ${props => `1px solid ${props.theme.colors.grey_light}`};
+  border-radius: 2px;
   background: none;
-  min-width: 40px;
-  font-size: 15px;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: ${props => props.theme.spacing.padd.m};
   padding-left: ${props => props.theme.spacing.padd.m};
+  min-width: 40px;
   user-select: none;
-  border-radius: 2px;
   box-sizing: border-box;
   display: inline-block;
   font-family: ${props => props.theme.font.family.main};
   font-size: ${props => props.theme.font.size.m};
-  font-weight: 300;
+  font-weight: ${props => props.theme.font.weight.m};
   height: 40px;
   line-height: normal;
-  min-width: 40px;
   outline: 0;
   white-space: nowrap;
   transition: 0.15s ease all;

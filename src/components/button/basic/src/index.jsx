@@ -8,6 +8,7 @@ const ButtonBasic = ({
   color,
   importance,
   link,
+  fullWidth,
   disabled,
   onClick,
   leftIcon,
@@ -22,6 +23,7 @@ const ButtonBasic = ({
       type={type}
       color={color}
       importance={importance}
+      fullWidth={fullWidth}
       disabled={disabled}
       onClick={onClick}
       theme={theme}
@@ -35,6 +37,7 @@ const ButtonBasic = ({
       size={size}
       type={type}
       color={color}
+      fullWidth={fullWidth}
       importance={importance}
       href={href}
       theme={theme}
@@ -60,6 +63,7 @@ ButtonBasic.propTypes = {
   importance: PropTypes.oneOf(["primary", "secondary", "terciary"]).isRequired,
   size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
   shape: PropTypes.oneOf(["square", "rounded", "pill"]).isRequired,
+  fullWidth: PropTypes.bool,
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   href: PropTypes.string,
@@ -73,7 +77,8 @@ ButtonBasic.defaultProps = {
   color: "primary",
   importance: "primary",
   size: "medium",
-  shape: "rounded"
+  shape: "rounded",
+  fullWidth: false
 };
 
 export default ButtonBasic;

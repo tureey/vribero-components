@@ -10,6 +10,7 @@ const ButtonBasicStyled = styled.button`
   padding-right: ${props => props.theme.spacing.padd.m};
   padding-left: ${props => props.theme.spacing.padd.m};
   min-width: 40px;
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   user-select: none;
   box-sizing: border-box;
   display: inline-block;
@@ -47,6 +48,7 @@ const LinkStyled = styled.a`
   height: 40px;
   line-height: normal;
   min-width: 40px;
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   outline: 0;
   white-space: nowrap;
   transition: 0.15s ease all;

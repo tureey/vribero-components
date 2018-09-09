@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--button-basic--themed",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Basic button with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

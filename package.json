@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/tureey/vribero-components#readme",
   "dependencies": {
-    "@s-ui/mono": "^1.36.0",
+    "@s-ui/mono": "^1.38.0",
     "polished": "^1.9.3",
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "styled-components": "^3.4.5"
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "styled-components": "^3.4.6"
   },
   "config": {
     "sui-mono": {

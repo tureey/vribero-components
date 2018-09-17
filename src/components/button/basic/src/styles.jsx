@@ -19,7 +19,6 @@ const ButtonBasicStyled = styled.button`
   font-weight: ${props => props.theme.font.weight.m};
   height: 40px;
   line-height: normal;
-  outline: 0;
   white-space: nowrap;
   transition: 0.15s ease all;
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};

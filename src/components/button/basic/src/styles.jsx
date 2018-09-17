@@ -48,7 +48,6 @@ const LinkStyled = styled.a`
   line-height: normal;
   min-width: 40px;
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  outline: 0;
   white-space: nowrap;
   transition: 0.15s ease all;
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};

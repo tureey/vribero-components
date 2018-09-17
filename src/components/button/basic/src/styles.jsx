@@ -130,7 +130,7 @@ const stylesImportancePrimaryOf = color => `
   ${colorAndFill("white")}
   background-color: ${color};
   border-color: ${color};
-  &:hover {
+  &:hover, &:focus {
     background-color: ${darken(0.05, color)}
     border-color: ${darken(0.05, color)} 
   }
@@ -140,7 +140,7 @@ const stylesImportanceSecondaryOf = color => `
   ${colorAndFill(color)}
   background-color: transparent;
   border-color: ${color};
-  &:hover {
+  &:hover, &:focus {
     border-color: ${darken(0.15, color)}
     ${colorAndFill(darken(0.15, color))}
   }
@@ -150,7 +150,7 @@ const stylesImportanceTerciaryOf = color => `
   ${colorAndFill(color)}
   background-color: transparent;
   border-color: transparent;
-  &:hover {
+  &:hover, &:focus {
     ${colorAndFill(darken(0.15, color))}
   }
 `;

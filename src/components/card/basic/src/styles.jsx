@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { darken } from "polished";
 
 const CardStyled = styled.button`
   display: inline-block;
@@ -24,4 +23,4 @@ const CardStyled = styled.button`
 const stylesPadding = (hasPadding, theme) =>
   hasPadding ? `padding: ${theme.spacing.theme.padd.m}` : `padding: 0`;
 
-export { CardStyled, LinkStyled };
+export { CardStyled };

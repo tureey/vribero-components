@@ -14,7 +14,7 @@ const CardStyled = styled.div`
     0 1px 2px rgba(102, 119, 136, 0.3);
 `;
 
-const CardMediaStyled = styled.figure`
+const MediaWrapper = styled.figure`
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -25,7 +25,7 @@ const CardMediaStyled = styled.figure`
   }
 `;
 
-const CardContentStyled = styled.div`
+const ChildrenWrapper = styled.div`
   padding: ${theme.spacing.theme.padd.m};
 
   button {
@@ -33,4 +33,4 @@ const CardContentStyled = styled.div`
   }
 `;
 
-export { CardStyled, CardMediaStyled, CardContentStyled };
+export { CardStyled, MediaWrapper, ChildrenWrapper };

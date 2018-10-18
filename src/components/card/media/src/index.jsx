@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CardStyled, CardMediaStyled, CardContentStyled } from "./styles";
+import { CardStyled, MediaWrapper, ChildrenWrapper } from "./styles";
 
 const CardMedia = ({ media, theme, children }) => (
   <CardStyled>
-    <CardMediaStyled theme={theme}>
+    <MediaWrapper theme={theme}>
       {overlay}
       {media}
-    </CardMediaStyled>
+    </MediaWrapper>
 
-    <CardContentStyled theme={theme}>{children}</CardContentStyled>
+    <ChildrenWrapper theme={theme}>{children}</ChildrenWrapper>
   </CardStyled>
 );
 

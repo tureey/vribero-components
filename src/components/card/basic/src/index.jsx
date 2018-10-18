@@ -1,15 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from "./styles";
+import { CardStyled } from "./styles";
 
-const CardBasic = ({ closable, hasPadding, theme, children }) => (
-  <ButtonBasicStyled hasPadding={hasPadding} closable={closable} theme={theme}>
+const CardBasic = ({ hasPadding, theme, children }) => (
+  <CardStyled hasPadding={hasPadding} theme={theme}>
     {children}
-  </ButtonBasicStyled>
+  </CardStyled>
 );
 
 CardBasic.propTypes = {
-  closable: PropTypes.bool,
   hasPadding: PropTypes.bool,
 
   theme: PropTypes.object,
@@ -17,7 +16,6 @@ CardBasic.propTypes = {
 };
 
 CardBasic.defaultProps = {
-  closable: true,
   hasPadding: false
 };
 

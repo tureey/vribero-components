@@ -1,14 +1,14 @@
 {
-  "name": "vribero-component--card-basic--themed",
+  "name": "vribero-component--card-media--themed",
   "version": "1.0.0",
-  "description": "Basic card with JSS prepared to receive a theme as json",
+  "description": "Media card with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
   },
   "keywords": [
     "card",
-    "basic",
+    "media",
     "accessibe",
     "aria",
     "jss",

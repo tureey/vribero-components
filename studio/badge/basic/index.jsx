@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
 import Badge from "../../../src/components/badge/basic/src/index";
 
 const stories = theme =>

@@ -25,7 +25,8 @@ const ButtonBasicStyled = styled.button`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   ${({ shape }) => stylesShape(shape)};
-  ${({ size, theme }) => sylesSize(size, theme)};
+  ${({ isElevated }) => stylesBoxShadow(isElevated)};
+  ${({ size, theme }) => stylesSizes(size, theme)};
   ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 `;
 const LinkStyled = styled.a`
@@ -55,7 +56,8 @@ const LinkStyled = styled.a`
   text-decoration: none;
 
   ${({ shape }) => stylesShape(shape)};
-  ${({ size, theme }) => sylesSize(size, theme)};
+  ${({ isElevated }) => stylesBoxShadow(isElevated)};
+  ${({ size, theme }) => stylesSizes(size, theme)};
   ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 `;
 
@@ -81,7 +83,7 @@ const stylesShape = shape =>
         ? `border-radius: 500px`
         : ``;
 
-const sylesSize = (size, theme) =>
+const stylesSizes = (size, theme) =>
   size === "small"
     ? `
     font-size: ${theme.font.size.s};
@@ -124,10 +126,17 @@ const colorAndFill = color => `
   fill: ${color}
 `;
 
+const stylesBoxShadow = isElevated =>
+  isElevated ? `box-shadow: 0 4px 7px -3px rgba(1,1,1,0.54);` : "";
+
 const stylesImportancePrimaryOf = color => `
   ${colorAndFill("white")}
   background-color: ${color};
   border-color: ${color};
+  cursor: hover;
+  /* @todo box shadow in buttons only primary and secondary */
+  /*box-shadow: 0 4px 7px -3px rgba(1,1,1,0.54);*/
+
   &:hover, &:focus {
     background-color: ${darken(0.05, color)}
     border-color: ${darken(0.05, color)} 
@@ -138,6 +147,7 @@ const stylesImportanceSecondaryOf = color => `
   ${colorAndFill(color)}
   background-color: transparent;
   border-color: ${color};
+
   &:hover, &:focus {
     border-color: ${darken(0.15, color)}
     ${colorAndFill(darken(0.15, color))}
@@ -148,6 +158,7 @@ const stylesImportanceTerciaryOf = color => `
   ${colorAndFill(color)}
   background-color: transparent;
   border-color: transparent;
+
   &:hover, &:focus {
     ${colorAndFill(darken(0.15, color))}
   }

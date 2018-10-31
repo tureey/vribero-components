@@ -1,0 +1,30 @@
+{
+  "name": "vribero-component--card-media--themed",
+  "version": "1.0.0",
+  "description": "Media card with JSS prepared to receive a theme as json",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
+  },
+  "keywords": [
+    "card",
+    "media",
+    "accessibe",
+    "aria",
+    "jss",
+    "ui",
+    "library",
+    "victorribero"
+  ],
+  "author": "Victor Ribero",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}

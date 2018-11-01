@@ -22,12 +22,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-styled-components": "^1.8.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"
   },
   "dependencies": {
-    "vribero-component--navigation-link--themed": "^1.0.11"
+    "vribero-component--navigation-link--themed": "^1.0.12"
   }
 }

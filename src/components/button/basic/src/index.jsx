@@ -82,7 +82,7 @@ ButtonBasic.defaultProps = {
   importance: "primary",
   size: "medium",
   shape: "rounded",
-  isElevated: false,
+  isElevated: true,
   fullWidth: false
 };
 

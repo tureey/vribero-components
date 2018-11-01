@@ -4,7 +4,8 @@
   "description": "UI Library with components that receive theme.json to use JSS",
   "main": "index.js",
   "scripts": {
-    "studio": "start-storybook -p 9001 -c .storybook"
+    "studio": "start-storybook -p 9001 -c .storybook",
+    "update:dependencies": "./bin/update-npm-dependencies.js"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,9 @@
     "polished": "^1.9.3",
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "styled-components": "^3.4.6"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^3.4.10"
   },
   "config": {
     "sui-mono": {
@@ -39,8 +40,8 @@
     }
   },
   "devDependencies": {
-    "@storybook/cli": "^3.4.10",
-    "@storybook/react": "^3.4.10",
+    "@storybook/cli": "^3.4.11",
+    "@storybook/react": "^3.4.11",
     "babel-core": "^6.26.3"
   }
 }

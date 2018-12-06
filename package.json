@@ -28,16 +28,9 @@
     "polished": "^1.9.3",
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
-<<<<<<< HEAD
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "styled-components": "^3.4.6",
     "babel-plugin-emotion": "^10.0.4"
-=======
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "styled-components": "^3.4.10"
->>>>>>> b5de8c81b88445ce858bcc1af3431e600995756c
   },
   "config": {
     "sui-mono": {
@@ -47,15 +40,9 @@
     }
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@storybook/cli": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-plugin-emotion": "^10.0.4"
-=======
-    "@storybook/cli": "^3.4.11",
-    "@storybook/react": "^3.4.11",
-    "babel-core": "^6.26.3"
->>>>>>> b5de8c81b88445ce858bcc1af3431e600995756c
   }
 }

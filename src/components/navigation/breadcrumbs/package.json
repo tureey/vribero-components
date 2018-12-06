@@ -28,6 +28,6 @@
     "babel-preset-react": "^6.24.1"
   },
   "dependencies": {
-    "vribero-component--navigation-link--themed": "^1.0.11"
+    "vribero-component--navigation-link--themed": "^1.0.12"
   }
 }

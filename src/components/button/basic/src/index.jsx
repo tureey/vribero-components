@@ -8,6 +8,7 @@ const ButtonBasic = ({
   color,
   importance,
   link,
+  isElevated,
   fullWidth,
   disabled,
   onClick,
@@ -23,6 +24,7 @@ const ButtonBasic = ({
       type={type}
       color={color}
       importance={importance}
+      isElevated={isElevated}
       fullWidth={fullWidth}
       disabled={disabled}
       onClick={onClick}
@@ -37,6 +39,7 @@ const ButtonBasic = ({
       size={size}
       type={type}
       color={color}
+      isElevated={isElevated}
       fullWidth={fullWidth}
       importance={importance}
       href={href}
@@ -63,6 +66,7 @@ ButtonBasic.propTypes = {
   importance: PropTypes.oneOf(["primary", "secondary", "terciary"]).isRequired,
   size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
   shape: PropTypes.oneOf(["square", "rounded", "pill"]).isRequired,
+  isElevated: PropTypes.bool,
   fullWidth: PropTypes.bool,
   disabled: PropTypes.bool,
   link: PropTypes.bool,
@@ -78,6 +82,7 @@ ButtonBasic.defaultProps = {
   importance: "primary",
   size: "medium",
   shape: "rounded",
+  isElevated: true,
   fullWidth: false
 };
 

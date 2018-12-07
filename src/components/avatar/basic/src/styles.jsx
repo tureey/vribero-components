@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const AvatarBasicStyled = styled.img`
   border: ${props => (props.isBordered ? "1px solid" : "none")};

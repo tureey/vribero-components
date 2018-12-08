@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--form-helptext--themed",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "Help text of an input field with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
@@ -23,9 +23,11 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "emotion": "^1.5.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.4"
   }
 }

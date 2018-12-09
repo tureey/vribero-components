@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.4",
-    "vribero-component--navigation-link--themed": "^1.0.12"
+    "vribero-component--navigation-link--themed": "^2"
   }
 }

@@ -61,19 +61,19 @@ const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
 );
 
 ButtonBasic.propTypes = {
-  type: PropTypes.oneOf(["button", "submit", "reset"]).isRequired,
-  color: PropTypes.oneOf(["primary", "secondary"]).isRequired,
-  importance: PropTypes.oneOf(["primary", "secondary", "terciary"]).isRequired,
-  size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
-  shape: PropTypes.oneOf(["square", "rounded", "pill"]).isRequired,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  color: PropTypes.oneOf(["primary", "secondary"]),
+  importance: PropTypes.oneOf(["primary", "secondary", "terciary"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  shape: PropTypes.oneOf(["square", "rounded", "pill"]),
   isElevated: PropTypes.bool,
   fullWidth: PropTypes.bool,
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   href: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 
-  theme: PropTypes.object
+  theme: PropTypes.object.isRequired
 };
 
 ButtonBasic.defaultProps = {

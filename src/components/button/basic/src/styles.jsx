@@ -7,8 +7,8 @@ const ButtonBasicStyled = styled.button`
   background: none;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: ${props => props.theme.spacing.padd.m};
-  padding-left: ${props => props.theme.spacing.padd.m};
+  padding-right: ${props => props.theme.spacing.s};
+  padding-left: ${props => props.theme.spacing.s};
   min-width: 40px;
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   user-select: none;
@@ -36,8 +36,8 @@ const LinkStyled = styled.a`
   font-size: 15px;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: ${props => props.theme.spacing.padd.m};
-  padding-left: ${props => props.theme.spacing.padd.m};
+  padding-right: ${props => props.theme.spacing.s};
+  padding-left: ${props => props.theme.spacing.s};
   user-select: none;
   border-radius: 2px;
   box-sizing: border-box;
@@ -70,7 +70,7 @@ const ButtonInnerStyled = styled.span`
   img:first-child,
   i:first-child,
   svg:first-child {
-    margin-right: ${props => props.theme.spacing.marg.s};
+    margin-right: ${props => props.theme.spacing.xs};
   }
 `;
 
@@ -78,48 +78,48 @@ const stylesShape = shape =>
   shape === "square"
     ? `border-radius: 0;`
     : shape === "rounded"
-      ? `border-radius: 3px`
-      : shape === "pill"
-        ? `border-radius: 500px`
-        : ``;
+    ? `border-radius: 3px`
+    : shape === "pill"
+    ? `border-radius: 500px`
+    : ``;
 
 const stylesSizes = (size, theme) =>
   size === "small"
     ? `
     font-size: ${theme.font.size.s};
-    padding-right: ${theme.spacing.padd.s};
-    padding-left: ${theme.spacing.padd.s};
+    padding-right: ${theme.spacing.xs};
+    padding-left: ${theme.spacing.xs};
     min-width: 32px;
   `
     : size === "medium"
-      ? `
+    ? `
     font-size: ${theme.font.size.m};
-    padding-right: ${theme.spacing.padd.m}  ;
-    padding-left: ${theme.spacing.padd.m} ;
+    padding-right: ${theme.spacing.s}  ;
+    padding-left: ${theme.spacing.s} ;
   `
-      : size === "large"
-        ? `
+    : size === "large"
+    ? `
     font-size: ${theme.font.size.l};
-    padding-right: ${theme.spacing.padd.l};
-    padding-left: ${theme.spacing.padd.l};
+    padding-right: ${theme.spacing.m};
+    padding-left: ${theme.spacing.m};
     min-width: 48px;
   `
-        : ``;
+    : ``;
 
 const stylesColors = (color, importance, theme) =>
   color === "primary" && importance === "primary"
     ? `${stylesImportancePrimaryOf(theme.colors.primary)}`
     : color === "primary" && importance === "secondary"
-      ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
-      : color === "primary" && importance === "terciary"
-        ? `${stylesImportanceTerciaryOf(theme.colors.primary)}`
-        : color === "secondary" && importance === "primary"
-          ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
-          : color === "secondary" && importance === "secondary"
-            ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
-            : color === "secondary" && importance === "terciary"
-              ? `${stylesImportanceTerciaryOf(theme.colors.accent)}`
-              : ``;
+    ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
+    : color === "primary" && importance === "terciary"
+    ? `${stylesImportanceTerciaryOf(theme.colors.primary)}`
+    : color === "secondary" && importance === "primary"
+    ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
+    : color === "secondary" && importance === "secondary"
+    ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
+    : color === "secondary" && importance === "terciary"
+    ? `${stylesImportanceTerciaryOf(theme.colors.accent)}`
+    : ``;
 
 const colorAndFill = color => `
   color: ${color}

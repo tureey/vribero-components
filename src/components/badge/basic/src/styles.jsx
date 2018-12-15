@@ -1,13 +1,13 @@
-import styled from '@emotion/styled'
-import { lighten, darken } from 'polished'
+import styled from "@emotion/styled";
+import { lighten, darken } from "polished";
 
 const BadgeBasicStyled = styled.span`
   background: none;
   font-size: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-  padding-right: ${props => props.theme.spacing.padd.m};
-  padding-left: ${props => props.theme.spacing.padd.m};
+  padding-right: ${props => props.theme.spacing.s};
+  padding-left: ${props => props.theme.spacing.s};
   user-select: none;
   border-radius: 2px;
   box-sizing: border-box;
@@ -17,65 +17,63 @@ const BadgeBasicStyled = styled.span`
   font-weight: 300;
   line-height: normal;
   white-space: nowrap;
-  opacity: ${({ disabled }) => disabled ? 0.3 : 1};
+  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
 
   ${({ size, theme }) =>
-    size === 'small'
+    size === "small"
       ? `
         font-size: ${theme.font.size.xs};
-        padding-right: ${theme.spacing.padd.s};
-        padding-left: ${theme.spacing.padd.s};
+        padding-right: ${theme.spacing.xs};
+        padding-left: ${theme.spacing.xs};
       `
-      : size === 'medium'
-        ? `
+      : size === "medium"
+      ? `
         font-size: ${theme.font.size.s};
-        padding-right: ${theme.spacing.padd.m}  ;
-        padding-left: ${theme.spacing.padd.m} ;
+        padding-right: ${theme.spacing.s}  ;
+        padding-left: ${theme.spacing.s} ;
       `
-        : size === 'large'
-          ? `
+      : size === "large"
+      ? `
         font-size: ${theme.font.size.m};
-        padding-right: ${theme.spacing.padd.l};
-        padding-left: ${theme.spacing.padd.l};
-      ` : ``
-  };
+        padding-right: ${theme.spacing.m};
+        padding-left: ${theme.spacing.m};
+      `
+      : ``};
 
   ${({ shape }) =>
-    shape === 'square'
+    shape === "square"
       ? `border-radius: 0;`
-      : shape === 'rounded'
-        ? `border-radius: 3px`
-        : shape === 'pill'
-          ? `border-radius: 500px` : ``
-  };
+      : shape === "rounded"
+      ? `border-radius: 3px`
+      : shape === "pill"
+      ? `border-radius: 500px`
+      : ``};
 
   ${({ type, theme }) =>
-    type === 'primary'
+    type === "primary"
       ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.primary};
-      `:
-      type === 'secondary'
-        ? `
+      `
+      : type === "secondary"
+      ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.accent};
-      `:
-        type === 'success'
-          ? `
+      `
+      : type === "success"
+      ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.success};
-      `:
-          type === 'danger'
-            ? `
+      `
+      : type === "danger"
+      ? `
         color: white;
         fill: white;
         background-color: ${theme.colors.danger};
-      `: ``
-  };
-`
-export {
-  BadgeBasicStyled
-}
+      `
+      : ``};
+`;
+export { BadgeBasicStyled };

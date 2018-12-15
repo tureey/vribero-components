@@ -1,9 +1,4 @@
 {
-    "presets": [
-        "env",
-        "react"
-    ],
-    "plugins": [
-        "emotion"
-    ]
+  "presets": ["env", "react"],
+  "plugins": ["emotion"]
 }

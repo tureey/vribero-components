@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { lighten } from 'polished'
+import styled from "@emotion/styled";
+import { lighten } from "polished";
 
 const HelpTextStyled = styled.span`
   display: block;
@@ -8,11 +8,9 @@ const HelpTextStyled = styled.span`
   font-family: ${props => props.theme.font.family.main};
   font-weight: ${props => props.theme.font.weight.s};
   letter-spacing: 0.25px;
-  margin-top: ${props => props.theme.spacing.marg.s};
+  margin-top: ${props => props.theme.spacing.xs};
   font-style: italic;
-  margin-bottom: ${props => props.theme.spacing.marg.s};
-`
+  margin-bottom: ${props => props.theme.spacing.xs};
+`;
 
-export {
-  HelpTextStyled
-}
+export { HelpTextStyled };

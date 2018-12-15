@@ -11,12 +11,12 @@ const BreadcrumbsListStyled = styled.ul`
 `;
 
 const BreadcrumbsElementStyled = styled.li`
-  margin-right: ${props => props.theme.spacing.marg.m};
+  margin-right: ${props => props.theme.spacing.s};
 
   &:not(:first-child) {
     &:before {
       content: ">";
-      margin-right: ${props => props.theme.spacing.marg.m};
+      margin-right: ${props => props.theme.spacing.s};
       color: ${props => props.theme.colors.grey_dark};
       font-weight: ${props => props.theme.font.weight.s};
     }

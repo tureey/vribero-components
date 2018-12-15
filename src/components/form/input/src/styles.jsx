@@ -22,7 +22,7 @@ const InputStyled = styled.input`
   }
 
   & + label {
-    margin-top: ${props => props.theme.spacing.marg.xl};
+    margin-top: ${props => props.theme.spacing.l};
   }
 
   ${props =>
@@ -40,37 +40,37 @@ const stylesShape = shape =>
   shape === "square"
     ? `border-radius: 0;`
     : shape === "rounded"
-      ? `border-radius: 3px`
-      : shape === "pill"
-        ? `border-radius: 500px`
-        : ``;
+    ? `border-radius: 3px`
+    : shape === "pill"
+    ? `border-radius: 500px`
+    : ``;
 
 const sylesSize = (size, theme) =>
   size === "small"
     ? `
     font-size: ${theme.font.size.xs};
-    padding-top: ${theme.spacing.padd.s};
-    padding-bottom: ${theme.spacing.padd.s};
-    padding-right: ${theme.spacing.padd.s};
-    padding-left: ${theme.spacing.padd.s};
+    padding-top: ${theme.spacing.xs};
+    padding-bottom: ${theme.spacing.xs};
+    padding-right: ${theme.spacing.xs};
+    padding-left: ${theme.spacing.xs};
   `
     : size === "medium"
-      ? `
+    ? `
     font-size: ${theme.font.size.s};
-    padding-top: ${theme.spacing.padd.m};
-    padding-bottom: ${theme.spacing.padd.m};
-    padding-right: ${theme.spacing.padd.m};
-    padding-left: ${theme.spacing.padd.m};
+    padding-top: ${theme.spacing.s};
+    padding-bottom: ${theme.spacing.s};
+    padding-right: ${theme.spacing.s};
+    padding-left: ${theme.spacing.s};
   `
-      : size === "large"
-        ? `
+    : size === "large"
+    ? `
     font-size: ${theme.font.size.m};
-    padding-top: ${theme.spacing.padd.l};
-    padding-bottom: ${theme.spacing.padd.l};
-    padding-right: ${theme.spacing.padd.l};
-    padding-left: ${theme.spacing.padd.l};
+    padding-top: ${theme.spacing.m};
+    padding-bottom: ${theme.spacing.m};
+    padding-right: ${theme.spacing.m};
+    padding-left: ${theme.spacing.m};
   `
-        : ``;
+    : ``;
 
 const stylesDisabled = disabled =>
   disabled

@@ -18,22 +18,6 @@ export const ButtonBasic = ({
   theme,
   children
 }) => {
-  console.log({
-    size,
-    type,
-    color,
-    importance,
-    link,
-    isElevated,
-    fullWidth,
-    disabled,
-    onClick,
-    leftIcon,
-    rightIcon,
-    href,
-    theme,
-    children
-  });
   return !link ? (
     <ButtonBasicStyled
       size={size}
@@ -88,7 +72,7 @@ ButtonBasic.propTypes = {
   disabled: PropTypes.bool,
   link: PropTypes.bool,
   href: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 
   theme: PropTypes.object.isRequired
 };

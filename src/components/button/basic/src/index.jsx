@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from "./styles";
 
-export const ButtonBasic = ({
+const ButtonBasic = ({
   size,
   type,
   color,
@@ -87,3 +87,5 @@ ButtonBasic.defaultProps = {
   isElevated: true,
   fullWidth: false
 };
+
+export default ButtonBasic;

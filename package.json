@@ -24,13 +24,16 @@
   },
   "homepage": "https://github.com/tureey/vribero-components#readme",
   "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
     "@s-ui/mono": "^1.38.0",
+    "@storybook/react": "^4.1.1",
+    "babel-plugin-emotion": "^10.0.4",
     "polished": "^1.9.3",
     "prop-types": "^15.6.2",
     "ramda": "^0.25.0",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "babel-plugin-emotion": "^10.0.4"
+    "react-dom": "^16.5.1"
   },
   "config": {
     "sui-mono": {
@@ -40,8 +43,6 @@
     }
   },
   "devDependencies": {
-    "@storybook/cli": "^3.4.10",
-    "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-plugin-emotion": "^10.0.4"
   }

@@ -63,7 +63,7 @@ const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
 ButtonBasic.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   color: PropTypes.oneOf(["primary", "secondary"]),
-  importance: PropTypes.oneOf(["primary", "secondary", "terciary"]),
+  importance: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   shape: PropTypes.oneOf(["square", "rounded", "pill"]),
   isElevated: PropTypes.bool,

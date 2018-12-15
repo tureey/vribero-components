@@ -111,14 +111,14 @@ const stylesColors = (color, importance, theme) =>
     ? `${stylesImportancePrimaryOf(theme.colors.primary)}`
     : color === "primary" && importance === "secondary"
     ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
-    : color === "primary" && importance === "terciary"
-    ? `${stylesImportanceTerciaryOf(theme.colors.primary)}`
+    : color === "primary" && importance === "tertiary"
+    ? `${stylesImportancetertiaryOf(theme.colors.primary)}`
     : color === "secondary" && importance === "primary"
     ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
     : color === "secondary" && importance === "secondary"
     ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
-    : color === "secondary" && importance === "terciary"
-    ? `${stylesImportanceTerciaryOf(theme.colors.accent)}`
+    : color === "secondary" && importance === "tertiary"
+    ? `${stylesImportancetertiaryOf(theme.colors.accent)}`
     : ``;
 
 const colorAndFill = color => `
@@ -154,7 +154,7 @@ const stylesImportanceSecondaryOf = color => `
   }
 `;
 
-const stylesImportanceTerciaryOf = color => `
+const stylesImportancetertiaryOf = color => `
   ${colorAndFill(color)}
   background-color: transparent;
   border-color: transparent;

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { darken } from "polished";
 
 const LinkStyled = styled.a`
   font-family: ${props => props.theme.font.family.main};
@@ -17,7 +16,7 @@ const LinkStyled = styled.a`
       ? `
         color: ${theme.palette.primary["500"]}
         &:hover {
-          color: ${darken(0.2, theme.palette.primary["500"])}
+          color: ${theme.palette.primary["700"]}
         }
       `
       : ``};

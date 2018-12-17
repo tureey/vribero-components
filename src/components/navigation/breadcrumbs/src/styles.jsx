@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { lighten, darken } from "polished";
 
 const BreadcrumbsListStyled = styled.ul`
   list-style: none;
@@ -30,4 +29,4 @@ const LastItemStyled = styled.span`
   font-family: ${props => props.theme.font.family.main};
 `;
 
-export { BreadcrumbsListStyled, BreadcrumbsElementStyled, LastItemStyled };
+export { BreadcrumbsºstStyled, BreadcrumbsElementStyled, LastItemStyled };

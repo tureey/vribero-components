@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { darken } from "polished";
 
 const TextareaStyled = styled.textarea`
   min-width: 100%;
@@ -18,7 +17,7 @@ const TextareaStyled = styled.textarea`
     0 1px 2px rgba(102, 119, 136, 0.3);
   background-color: ${props => props.theme.palette.grey["200"]};
   &:focus {
-    background: ${props => darken(0.15, props.theme.palette.grey["200"])};
+    background: ${props => props.theme.palette.grey["300"]};
   }
 
   & + label {
@@ -29,9 +28,6 @@ const TextareaStyled = styled.textarea`
     props.appearance === "white"
       ? `
         background: white;
-        &:focus {
-          background: ${props => darken(0.15, white)};
-        }
       `
       : ``};
 

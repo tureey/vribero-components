@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { lighten, darken } from "polished";
 
 const BadgeBasicStyled = styled.span`
   background: none;
@@ -18,62 +17,5 @@ const BadgeBasicStyled = styled.span`
   line-height: normal;
   white-space: nowrap;
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
-
-  ${({ size, theme }) =>
-    size === "small"
-      ? `
-        font-size: ${theme.font.size.xs};
-        padding-right: ${theme.spacing.xs};
-        padding-left: ${theme.spacing.xs};
-      `
-      : size === "medium"
-      ? `
-        font-size: ${theme.font.size.s};
-        padding-right: ${theme.spacing.s}  ;
-        padding-left: ${theme.spacing.s} ;
-      `
-      : size === "large"
-      ? `
-        font-size: ${theme.font.size.m};
-        padding-right: ${theme.spacing.m};
-        padding-left: ${theme.spacing.m};
-      `
-      : ``};
-
-  ${({ shape }) =>
-    shape === "square"
-      ? `border-radius: 0;`
-      : shape === "rounded"
-      ? `border-radius: 3px`
-      : shape === "pill"
-      ? `border-radius: 500px`
-      : ``};
-
-  ${({ type, theme }) =>
-    type === "primary"
-      ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.primary};
-      `
-      : type === "secondary"
-      ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.accent};
-      `
-      : type === "success"
-      ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.success};
-      `
-      : type === "danger"
-      ? `
-        color: white;
-        fill: white;
-        background-color: ${theme.colors.danger};
-      `
-      : ``};
 `;
 export { BadgeBasicStyled };

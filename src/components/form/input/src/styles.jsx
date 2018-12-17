@@ -5,20 +5,20 @@ const InputStyled = styled.input`
   width: 100%;
   box-sizing: border-box;
   border: none;
-  color: ${props => props.theme.colors.system};
+  color: ${props => props.theme.palette.grey["500"]};
   outline: none;
   font-family: ${props => props.theme.font.family.main};
   letter-spacing: 0.2px;
   font-weight: 300;
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
     0 1px 2px rgba(102, 119, 136, 0.3);
-  background-color: ${props => props.theme.colors.grey_light};
+  background-color: ${props => props.theme.palette.grey["200"]};
   ${({ shape }) => stylesShape(shape)};
   ${({ disabled }) => stylesDisabled(disabled)};
   ${({ size, theme }) => sylesSize(size, theme)};
 
   &:focus {
-    background: ${props => darken(0.1, props.theme.colors.grey_light)};
+    background: ${props => darken(0.1, props.theme.palette.grey["200"])};
   }
 
   & + label {

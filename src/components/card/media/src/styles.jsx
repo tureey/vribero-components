@@ -4,9 +4,9 @@ const CardStyled = styled.div`
   display: inline-block;
   box-sizing: border-box;
   min-width: 275px;
-  border: ${props => `1px solid ${props.theme.colors.grey_light}`};
+  border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
   border-radius: 3px;
-  background: ${props => props.theme.colors.white};
+  background: white;
   font-family: ${props => props.theme.font.family.main};
   font-size: ${props => props.theme.font.size.m};
   font-weight: ${props => props.theme.font.weight.m};

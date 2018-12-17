@@ -15,9 +15,9 @@ const LinkStyled = styled.a`
   ${({ color, theme }) =>
     color === "primary"
       ? `
-        color: ${theme.colors.primary}
+        color: ${theme.palette.primary["500"]}
         &:hover {
-          color: ${darken(0.2, theme.colors.primary)}
+          color: ${darken(0.2, theme.palette.primary["500"])}
         }
       `
       : ``};

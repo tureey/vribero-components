@@ -10,47 +10,38 @@ const AvatarBasicStyled = styled.img`
   ${({ size }) =>
     size === "xsmall"
       ? `
-    width: 1.5rem;
-    height: 1.5rem;
-    `
-      : size === "small"
-        ? `
-        width: 2rem;
-        height: 2rem;
+        width: 20px;
+        height: 20px;
         `
-        : size === "medium"
-          ? `
-            width: 2.5rem;
-            height: 2.5rem;
-            `
-          : size === "large"
-            ? `
-            width: 3.5rem;
-            height: 3.5rem;
-          `
-            : size === "giant"
-              ? `
-            width: 10rem;
-            height: 10rem;
-            `
-              : ``} ${({ shape }) =>
+      : size === "small"
+      ? `
+        width: 25px;
+        height: 25px;
+        `
+      : size === "medium"
+      ? `
+        width: 30px;
+        height: 30px;
+        `
+      : `
+        width: 40px;
+        height: 40px;
+      `}
+
+  ${({ shape }) =>
     shape === "square"
       ? `border-radius: 0;`
       : shape === "rounded"
-        ? `border-radius: 3px`
-        : shape === "circle"
-          ? `border-radius: 500px`
-          : ``};
+      ? `border-radius: 3px`
+      : shape === "circle"
+      ? `border-radius: 500px`
+      : ``};
 
   ${({ borderColor, theme }) =>
     borderColor === "primary"
-      ? `border-color: ${theme.colors.primary};`
-      : borderColor === "secondary"
-        ? `border-color: ${theme.colors.accent};`
-        : borderColor === "system"
-          ? `border-color: ${theme.colors.system};`
-          : borderColor === "grey"
-            ? `border-color: ${theme.colors.grey};`
-            : ``};
+      ? `border-color: ${theme.palette.primary["500"]};`
+      : borderColor === "grey"
+      ? `border-color: ${theme.palette.grey["200"]};`
+      : ``};
 `;
 export { AvatarBasicStyled };

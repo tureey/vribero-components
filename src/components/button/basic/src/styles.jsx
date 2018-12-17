@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
-import { darken } from "polished";
 
 const ButtonBasicStyled = styled.button`
-  border: ${props => `1px solid ${props.theme.colors.grey_light}`};
+  border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
   border-radius: 2px;
   background: none;
   padding-top: 0;
@@ -30,7 +29,7 @@ const ButtonBasicStyled = styled.button`
   ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 `;
 const LinkStyled = styled.a`
-  border: ${props => `1px solid ${props.theme.colors.grey_light}`};
+  border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
   background: none;
   min-width: 40px;
   font-size: 15px;
@@ -108,18 +107,12 @@ const stylesSizes = (size, theme) =>
 
 const stylesColors = (color, importance, theme) =>
   color === "primary" && importance === "primary"
-    ? `${stylesImportancePrimaryOf(theme.colors.primary)}`
+    ? `${stylesImportancePrimaryOf(theme.palette.primary["500"])}`
     : color === "primary" && importance === "secondary"
-    ? `${stylesImportanceSecondaryOf(theme.colors.primary)}`
+    ? `${stylesImportanceSecondaryOf(theme.palette.primary["500"])}`
     : color === "primary" && importance === "tertiary"
-    ? `${stylesImportancetertiaryOf(theme.colors.primary)}`
-    : color === "secondary" && importance === "primary"
-    ? `${stylesImportancePrimaryOf(theme.colors.accent)}`
-    : color === "secondary" && importance === "secondary"
-    ? `${stylesImportanceSecondaryOf(theme.colors.accent)}`
-    : color === "secondary" && importance === "tertiary"
-    ? `${stylesImportancetertiaryOf(theme.colors.accent)}`
-    : ``;
+    ? `${stylesImportancetertiaryOf(theme.palette.primary["500"])}`
+    : color === "secondary" && importance === "primary";
 
 const colorAndFill = color => `
   color: ${color}

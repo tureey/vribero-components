@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { darken } from "polished";
 
 const InputStyled = styled.input`
   width: 100%;
@@ -18,7 +17,7 @@ const InputStyled = styled.input`
   ${({ size, theme }) => sylesSize(size, theme)};
 
   &:focus {
-    background: ${props => darken(0.1, props.theme.palette.grey["200"])};
+    background: ${props => props.theme.palette.grey["300"]};
   }
 
   & + label {
@@ -29,9 +28,6 @@ const InputStyled = styled.input`
     props.appearance === "white"
       ? `
         background: white;
-        &:focus {
-          background: ${props => darken(0.15, white)};
-        }
       `
       : ``};
 `;

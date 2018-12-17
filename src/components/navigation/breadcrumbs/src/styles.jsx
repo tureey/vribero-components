@@ -29,4 +29,4 @@ const LastItemStyled = styled.span`
   font-family: ${props => props.theme.font.family.main};
 `;
 
-export { BreadcrumbsStyled, BreadcrumbsElementStyled, LastItemStyled };
+export { BreadcrumbsListStyled, BreadcrumbsElementStyled, LastItemStyled };

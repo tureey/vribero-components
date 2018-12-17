@@ -1,93 +1,94 @@
 import styled from "@emotion/styled";
 
-const ButtonBasicStyled = styled.button`
-  border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
-  border-radius: 2px;
+const stylesCommon = theme => `
+  border: '1px solid ${theme.palette.grey["200"]};
   background: none;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: ${props => props.theme.spacing.s};
-  padding-left: ${props => props.theme.spacing.s};
+  padding-right: ${theme.spacing.s};
+  padding-left: ${theme.spacing.s};
   min-width: 40px;
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   user-select: none;
   box-sizing: border-box;
   display: inline-block;
-  font-family: ${props => props.theme.font.family.main};
-  font-size: ${props => props.theme.font.size.m};
-  font-weight: ${props => props.theme.font.weight.m};
+  font-family: ${theme.font.family.main};
+  font-size: ${props.theme.font.size.m};
+  font-weight: ${props.theme.font.weight.m};
   height: 40px;
   line-height: normal;
   white-space: nowrap;
-  transition: 0.15s ease all;
+  transition: 0.15s background-color all;
+`;
+
+const ButtonBasicStyled = styled.button`
+  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-
-  ${({ shape }) => stylesShape(shape)};
+  ${stylesCommon()}
+  ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
   ${({ isElevated }) => stylesBoxShadow(isElevated)};
   ${({ size, theme }) => stylesSizes(size, theme)};
   ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 `;
+
 const LinkStyled = styled.a`
-  border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
-  background: none;
-  min-width: 40px;
-  font-size: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: ${props => props.theme.spacing.s};
-  padding-left: ${props => props.theme.spacing.s};
-  user-select: none;
-  border-radius: 2px;
-  box-sizing: border-box;
-  display: inline-block;
-  font-family: ${props => props.theme.font.family.main};
-  font-size: ${props => props.theme.font.size.m};
-  font-weight: ${props => props.theme.font.weight.m};
-  height: 40px;
-  line-height: normal;
-  min-width: 40px;
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  white-space: nowrap;
-  transition: 0.15s ease all;
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   text-decoration: none;
-
-  ${({ shape }) => stylesShape(shape)};
+  ${stylesCommon()}
+  ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
   ${({ isElevated }) => stylesBoxShadow(isElevated)};
-  ${({ size, theme }) => stylesSizes(size, theme)};
-  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
+  ${({ size, theme }) => stylesSizes(size, theme.box.radius)};
+
+  ${({ color, importance, theme }) =>
+    color === "primary" && importance === "primary"
+      ? `
+        ${colorAndFill("white")}
+        background-color: ${color};
+        border-color: ${color};
+        cursor: hover;
+
+        &:hover, &:focus {
+          background-color: ${darken(0.05, color)}
+          border-color: ${darken(0.05, color)} 
+        }
+  `
+      : color === "primary" && importance === "secondary"
+      ? `${stylesImportanceSecondaryOf(theme.palette.primary["500"])}`
+      : color === "primary" && importance === "tertiary"
+      ? `${stylesImportancetertiaryOf(theme.palette.primary["500"])}`
+      : ``};
 `;
 
-const ButtonInnerStyled = styled.span`
-  align-items: center;
-  display: inline-flex;
-  height: 100%;
-  pointer-events: none;
+const stylesImportancePrimaryOf = color => `
+  ${colorAndFill("white")}
+  background-color: ${color};
+  border-color: ${color};
+  cursor: hover;
 
-  img:first-child,
-  i:first-child,
-  svg:first-child {
-    margin-right: ${props => props.theme.spacing.xs};
+  &:hover, &:focus {
+    background-color: ${darken(0.05, color)}
+    border-color: ${darken(0.05, color)} 
   }
 `;
 
-const stylesShape = shape =>
+const stylesShape = (shape, radius) =>
   shape === "square"
-    ? `border-radius: 0;`
+    ? `border-radius: ${radius.none}`
     : shape === "rounded"
-    ? `border-radius: 3px`
+    ? `border-radius: ${radius.rounded}`
     : shape === "pill"
-    ? `border-radius: 500px`
+    ? `border-radius: ${radius.pill}`
     : ``;
 
 const stylesSizes = (size, theme) =>
   size === "small"
     ? `
     font-size: ${theme.font.size.s};
-    padding-right: ${theme.spacing.xs};
-    padding-left: ${theme.spacing.xs};
+    padding-right: ${theme.spacing.s};
+    padding-left: ${theme.spacing.s};
     min-width: 32px;
   `
     : size === "medium"
@@ -119,16 +120,21 @@ const colorAndFill = color => `
   fill: ${color}
 `;
 
-const stylesBoxShadow = isElevated =>
-  isElevated ? `box-shadow: 0 4px 7px -3px rgba(1,1,1,0.54);` : "";
+const stylesBoxShadow = (isElevated, boxShadow) =>
+  isElevated
+    ? `
+    box-shadow: ${boxShadow[0]}
+    &:hover {
+      box-shadow: ${boxShadow[1]}
+    }
+  `
+    : "";
 
 const stylesImportancePrimaryOf = color => `
   ${colorAndFill("white")}
   background-color: ${color};
   border-color: ${color};
   cursor: hover;
-  /* @todo box shadow in buttons only primary and secondary */
-  /*box-shadow: 0 4px 7px -3px rgba(1,1,1,0.54);*/
 
   &:hover, &:focus {
     background-color: ${darken(0.05, color)}
@@ -154,6 +160,19 @@ const stylesImportancetertiaryOf = color => `
 
   &:hover, &:focus {
     ${colorAndFill(darken(0.15, color))}
+  }
+`;
+
+const ButtonInnerStyled = styled.span`
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+  pointer-events: none;
+
+  img:first-child,
+  i:first-child,
+  svg:first-child {
+    margin-right: ${props => props.theme.spacing.xs};
   }
 `;
 

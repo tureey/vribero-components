@@ -56,7 +56,10 @@ const theme = {
       rounded: "3px",
       pill: "500px"
     },
-    shadow: ["0 3px 5px rgba(1,1,1,0.2)", "0 2px 3px rgba(1,1,1,0.4)"]
+    shadow: [
+      "0 3px 5px rgba(1,1,1,0.2)",
+      "0 2px 3px rgba(1,1,1,0.4)"
+    ]
   },
   font: {
     size: {

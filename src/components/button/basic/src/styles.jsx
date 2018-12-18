@@ -115,9 +115,9 @@ const stylesSizes = (size, theme) =>
 const stylesBoxShadow = (isElevated, boxShadow) =>
   isElevated
     ? `
-    box-shadow: ${boxShadow[0]}
+    box-shadow: ${boxShadow["0"]}
     &:hover {
-      box-shadow: ${boxShadow[1]}
+      box-shadow: ${boxShadow["1"]}
     }
   `
     : "";

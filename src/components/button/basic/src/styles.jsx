@@ -19,6 +19,8 @@ const stylesCommon = props => `
   border: 1px solid ${props.theme.palette.grey["200"]};
   user-select: none;
 
+  color: white;
+  fill: white;
   font-family: ${props.theme.font.family.primary};
   font-weight: ${props.theme.font.weight.m};
 

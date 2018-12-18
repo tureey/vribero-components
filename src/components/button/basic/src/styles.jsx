@@ -27,8 +27,7 @@ const ButtonBasicStyled = styled.button`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   ${({ theme }) => stylesCommon(theme)};
   ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
-  ${({ isElevated, theme }) =>
-    stylesBoxShadow(isElevated, theme.box.boxShadow)};
+  ${({ isElevated, theme }) => stylesBoxShadow(isElevated, theme.box.shadow)};
   ${({ size, theme }) => stylesSizes(size, theme)};
   ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 `;
@@ -40,8 +39,7 @@ const LinkStyled = styled.a`
   text-decoration: none;
   ${({ theme }) => stylesCommon(theme)};
   ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
-  ${({ isElevated, theme }) =>
-    stylesBoxShadow(isElevated, theme.box.boxShadow)};
+  ${({ isElevated, theme }) => stylesBoxShadow(isElevated, theme.box.shadow)};
   ${({ size, theme }) => stylesSizes(size, theme.box.radius)};
 
   ${({ color, importance, theme }) =>

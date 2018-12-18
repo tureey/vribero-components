@@ -1,51 +1,82 @@
 import styled from "@emotion/styled";
 
-const stylesCommon = theme => `
-  border: '1px solid ${theme.palette.grey["200"]};
-  background: none;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: ${theme.spacing.s};
-  padding-left: ${theme.spacing.s};
-  min-width: 40px;
-  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  user-select: none;
-  box-sizing: border-box;
+const ButtonBasicStyled = styled.button`
+  ${({ theme }) => stylesCommon(theme)};
+`;
+const LinkStyled = styled.a`
+  text-decoration: none;
+  ${props => stylesCommon(props)};
+`;
+
+const stylesCommon = props => `
   display: inline-block;
-  font-family: ${theme.font.family.main};
-  font-size: ${theme.font.size.m};
-  font-weight: ${theme.font.weight.m};
+  min-width: 40px;
+  width: ${props.fullWidth ? "100%" : "auto"};
   height: 40px;
+  box-sizing: border-box;
+  
+  border: '1px solid ${props.theme.palette.grey["200"]};
+  background: none;
+  padding-top: 0 ${props.theme.spacing.s} 0 ${props.theme.spacing.s};
+  user-select: none;
+
+  font-family: ${props.theme.font.family.main};
+  font-size: ${props.theme.font.size.m};
+  font-weight: ${props.theme.font.weight.m};
+
   line-height: normal;
   white-space: nowrap;
+  opacity: ${props.disabled ? 0.6 : 1};
   transition: 0.15s background-color all;
+  cursor: ${props.disabled ? "not-allowed" : "pointer"};
+
+  ${stylesShape(props.shape, props.theme.box.radius)};
+  ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
+  ${stylesSizes(props.size, props.theme)};
+  ${stylesColor(props.color, props.importance, props.theme)};
 `;
 
-const ButtonBasicStyled = styled.button`
-  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  ${({ theme }) => stylesCommon(theme)};
-  ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
-  ${({ isElevated, theme }) => stylesBoxShadow(isElevated, theme.box.shadow)};
-  ${({ size, theme }) => stylesSizes(size, theme)};
-  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
-`;
+const stylesShape = (_propShape, radius) =>
+  _propShape === "rounded"
+    ? `border-radius: ${radius.rounded}`
+    : _propShape === "pill"
+    ? `border-radius: ${radius.pill}`
+    : `border-radius: ${radius.none}`;
 
-const LinkStyled = styled.a`
-  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  text-decoration: none;
-  ${({ theme }) => stylesCommon(theme)};
-  ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
-  ${({ isElevated, theme }) => stylesBoxShadow(isElevated, theme.box.shadow)};
-  ${({ size, theme }) => stylesSizes(size, theme)};
-  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
+const stylesSizes = (_propSize, theme) =>
+  _propSize === "small"
+    ? `
+      font-size: ${theme.font.size.s};
+      padding-right: ${theme.spacing.s};
+      padding-left: ${theme.spacing.s};
+      min-width: 32px;
+    `
+    : _propSize === "large"
+    ? `
+      font-size: ${theme.font.size.l};
+      padding-right: ${theme.spacing.m};
+      padding-left: ${theme.spacing.m};
+      min-width: 48px;
+    `
+    : `
+      font-size: ${theme.font.size.m};
+      padding-right: ${theme.spacing.s}  ;
+      padding-left: ${theme.spacing.s} ;
+      `;
 
-  ${({ color, importance, theme }) =>
-    color === "primary" && importance === "primary"
-      ? `
+const stylesBoxShadow = (_propsIsElevated, boxShadow) =>
+  _propsIsElevated
+    ? `
+    box-shadow: ${boxShadow["0"]}
+    &:hover {
+      box-shadow: ${boxShadow["1"]}
+    }
+  `
+    : "";
+
+const stylesColor = (_propColor, _propImportance, theme) =>
+  _propColor === "primary" && _propImportance === "primary"
+    ? `
         color: white;
         fill: white;
         background-color: ${theme.palette.primary["500"]};
@@ -56,8 +87,8 @@ const LinkStyled = styled.a`
           border-color: ${theme.palette.primary["700"]};
         }
   `
-      : color === "primary" && importance === "secondary"
-      ? `
+    : _propColor === "primary" && _propImportance === "secondary"
+    ? `
         color: ${theme.palette.primary["500"]};
         fill: ${theme.palette.primary["500"]};
         background-color: transparent;
@@ -67,61 +98,18 @@ const LinkStyled = styled.a`
           border-color: ${theme.palette.primary["700"]};
         }
       `
-      : color === "primary" && importance === "tertiary"
-      ? `
+    : _propColor === "primary" && _propImportance === "tertiary"
+    ? `
         color: ${theme.palette.primary["500"]};
         fill: ${theme.palette.primary["500"]};
         background-color: transparent;
 
         &:hover, &:focus {
           color: ${theme.palette.primary["700"]};
-        fill: ${theme.palette.primary["700"]};
+          fill: ${theme.palette.primary["700"]};
         }
       `
-      : ``}
-`;
-
-const stylesShape = (shape, radius) =>
-  shape === "square"
-    ? `border-radius: ${radius.none}`
-    : shape === "rounded"
-    ? `border-radius: ${radius.rounded}`
-    : shape === "pill"
-    ? `border-radius: ${radius.pill}`
     : ``;
-
-const stylesSizes = (size, theme) =>
-  size === "small"
-    ? `
-    font-size: ${theme.font.size.s};
-    padding-right: ${theme.spacing.s};
-    padding-left: ${theme.spacing.s};
-    min-width: 32px;
-  `
-    : size === "medium"
-    ? `
-    font-size: ${theme.font.size.m};
-    padding-right: ${theme.spacing.s}  ;
-    padding-left: ${theme.spacing.s} ;
-  `
-    : size === "large"
-    ? `
-    font-size: ${theme.font.size.l};
-    padding-right: ${theme.spacing.m};
-    padding-left: ${theme.spacing.m};
-    min-width: 48px;
-  `
-    : ``;
-
-const stylesBoxShadow = (isElevated, boxShadow) =>
-  isElevated
-    ? `
-    box-shadow: ${boxShadow["0"]}
-    &:hover {
-      box-shadow: ${boxShadow["1"]}
-    }
-  `
-    : "";
 
 const ButtonInnerStyled = styled.span`
   align-items: center;

@@ -40,7 +40,8 @@ const LinkStyled = styled.a`
   ${({ theme }) => stylesCommon(theme)};
   ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
   ${({ isElevated, theme }) => stylesBoxShadow(isElevated, theme.box.shadow)};
-  ${({ size, theme }) => stylesSizes(size, theme.box.radius)};
+  ${({ size, theme }) => stylesSizes(size, theme)};
+  ${({ color, importance, theme }) => stylesColors(color, importance, theme)};
 
   ${({ color, importance, theme }) =>
     color === "primary" && importance === "primary"

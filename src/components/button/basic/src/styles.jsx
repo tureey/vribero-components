@@ -16,12 +16,9 @@ const stylesCommon = props => `
   box-sizing: border-box;
   
   border: 1px solid ${props.theme.palette.grey["200"]};
-  background: none;
-  padding-top: 0 ${props.theme.spacing.s} 0 ${props.theme.spacing.s};
   user-select: none;
 
-  font-family: ${props.theme.font.family.main};
-  font-size: ${props.theme.font.size.m};
+  font-family: ${props.theme.font.family.primary};
   font-weight: ${props.theme.font.weight.m};
 
   line-height: normal;
@@ -56,7 +53,8 @@ const stylesSizes = (_propSize, theme) =>
       font-size: ${theme.font.size.l};
       padding-right: ${theme.spacing.m};
       padding-left: ${theme.spacing.m};
-      min-width: 48px;
+      min-width: 50px;
+      line-height: 1;
     `
     : `
       font-size: ${theme.font.size.m};
@@ -67,9 +65,9 @@ const stylesSizes = (_propSize, theme) =>
 const stylesBoxShadow = (_propsIsElevated, boxShadow) =>
   _propsIsElevated
     ? `
-    box-shadow: ${boxShadow["0"]}
+    box-shadow: ${boxShadow["0"]};
     &:hover {
-      box-shadow: ${boxShadow["1"]}
+      box-shadow: ${boxShadow["1"]};
     }
   `
     : "";

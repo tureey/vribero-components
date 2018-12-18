@@ -25,7 +25,7 @@ const stylesCommon = props => `
   line-height: normal;
   white-space: nowrap;
   opacity: ${props.disabled ? 0.6 : 1};
-  transition: background 0.15s ease, box-shadow 0.15 ease;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
   cursor: ${props.disabled ? "not-allowed" : "pointer"};
 
   ${stylesColor(props.color, props.importance, props.theme)};
@@ -59,7 +59,6 @@ const stylesBoxShadow = (_propsIsElevated, boxShadow) =>
   _propsIsElevated
     ? `
     box-shadow: ${boxShadow["0"]};
-    transition: box-shadow
     &:hover {
       box-shadow: ${boxShadow["1"]};
     }
@@ -87,6 +86,8 @@ const stylesColor = (_propColor, _propImportance, theme) =>
         border-color: ${theme.palette.primary["500"]};
 
         &:hover, &:focus {
+          color: ${theme.palette.primary["700"]};
+        fill: ${theme.palette.primary["700"]};
           border-color: ${theme.palette.primary["700"]};
         }
       `

@@ -25,7 +25,7 @@ const ButtonBasicStyled = styled.button`
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  ${stylesCommon()}
+  ${({ theme }) => stylesCommon(theme)};
   ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
   ${({ isElevated }) => stylesBoxShadow(isElevated)};
   ${({ size, theme }) => stylesSizes(size, theme)};
@@ -37,7 +37,7 @@ const LinkStyled = styled.a`
   opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   text-decoration: none;
-  ${stylesCommon()}
+  ${({ theme }) => stylesCommon(theme)};
   ${({ shape, theme }) => stylesShape(shape, theme.box.radius)};
   ${({ isElevated }) => stylesBoxShadow(isElevated)};
   ${({ size, theme }) => stylesSizes(size, theme.box.radius)};
@@ -48,7 +48,7 @@ const LinkStyled = styled.a`
         color: white;
         fill: white;
         background-color: ${theme.palette.primary["500"]};
-        border-color: ${color};
+        border-color: ${theme.palette.primary["500"]};
 
         &:hover, &:focus {
           background-color: ${theme.palette.primary["700"]};
@@ -111,11 +111,6 @@ const stylesSizes = (size, theme) =>
     min-width: 48px;
   `
     : ``;
-
-const colorAndFill = color => `
-  color: ${color}
-  fill: ${color}
-`;
 
 const stylesBoxShadow = (isElevated, boxShadow) =>
   isElevated

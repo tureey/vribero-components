@@ -19,18 +19,15 @@ const stylesCommon = props => `
   border: 1px solid ${props.theme.palette.grey["200"]};
   user-select: none;
 
-  color: white;
-  fill: white;
   font-family: ${props.theme.font.family.primary};
   font-weight: ${props.theme.font.weight.m};
 
   line-height: normal;
   white-space: nowrap;
   opacity: ${props.disabled ? 0.6 : 1};
-  transition: 0.15s background-color all;
+  transition: background 0.15s ease, box-shadow 0.15 ease;
   cursor: ${props.disabled ? "not-allowed" : "pointer"};
 
-  ${console.log(props.theme.box.radius)}
   ${stylesColor(props.color, props.importance, props.theme)};
   ${stylesSizes(props.size, props.theme)};
   ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
@@ -62,6 +59,7 @@ const stylesBoxShadow = (_propsIsElevated, boxShadow) =>
   _propsIsElevated
     ? `
     box-shadow: ${boxShadow["0"]};
+    transition: box-shadow
     &:hover {
       box-shadow: ${boxShadow["1"]};
     }

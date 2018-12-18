@@ -15,7 +15,7 @@ const stylesCommon = props => `
   height: 40px;
   box-sizing: border-box;
   
-  border: 1px solid ${props.props.palette.grey["200"]};
+  border: 1px solid ${props.palette.grey["200"]};
   background: none;
   padding-top: 0 ${props.theme.spacing.s} 0 ${props.theme.spacing.s};
   user-select: none;

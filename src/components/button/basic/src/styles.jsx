@@ -45,33 +45,39 @@ const LinkStyled = styled.a`
   ${({ color, importance, theme }) =>
     color === "primary" && importance === "primary"
       ? `
-        ${colorAndFill("white")}
-        background-color: ${color};
+        color: white;
+        fill: white;
+        background-color: ${theme.palette.primary["500"]};
         border-color: ${color};
-        cursor: hover;
 
         &:hover, &:focus {
-          background-color: ${darken(0.05, color)}
-          border-color: ${darken(0.05, color)} 
+          background-color: ${theme.palette.primary["700"]};
+          border-color: ${theme.palette.primary["700"]};
         }
   `
       : color === "primary" && importance === "secondary"
-      ? `${stylesImportanceSecondaryOf(theme.palette.primary["500"])}`
+      ? `
+        color: ${theme.palette.primary["500"]};
+        fill: ${theme.palette.primary["500"]};
+        background-color: transparent;
+        border-color: ${theme.palette.primary["500"]};
+
+        &:hover, &:focus {
+          border-color: ${theme.palette.primary["700"]};
+        }
+      `
       : color === "primary" && importance === "tertiary"
-      ? `${stylesImportancetertiaryOf(theme.palette.primary["500"])}`
-      : ``};
-`;
+      ? `
+        color: ${theme.palette.primary["500"]};
+        fill: ${theme.palette.primary["500"]};
+        background-color: transparent;
 
-const stylesImportancePrimaryOf = color => `
-  ${colorAndFill("white")}
-  background-color: ${color};
-  border-color: ${color};
-  cursor: hover;
-
-  &:hover, &:focus {
-    background-color: ${darken(0.05, color)}
-    border-color: ${darken(0.05, color)} 
-  }
+        &:hover, &:focus {
+          color: ${theme.palette.primary["700"]};
+        fill: ${theme.palette.primary["700"]};
+        }
+      `
+      : ``}
 `;
 
 const stylesShape = (shape, radius) =>
@@ -106,15 +112,6 @@ const stylesSizes = (size, theme) =>
   `
     : ``;
 
-const stylesColors = (color, importance, theme) =>
-  color === "primary" && importance === "primary"
-    ? `${stylesImportancePrimaryOf(theme.palette.primary["500"])}`
-    : color === "primary" && importance === "secondary"
-    ? `${stylesImportanceSecondaryOf(theme.palette.primary["500"])}`
-    : color === "primary" && importance === "tertiary"
-    ? `${stylesImportancetertiaryOf(theme.palette.primary["500"])}`
-    : color === "secondary" && importance === "primary";
-
 const colorAndFill = color => `
   color: ${color}
   fill: ${color}
@@ -129,39 +126,6 @@ const stylesBoxShadow = (isElevated, boxShadow) =>
     }
   `
     : "";
-
-const stylesImportancePrimaryOf = color => `
-  ${colorAndFill("white")}
-  background-color: ${color};
-  border-color: ${color};
-  cursor: hover;
-
-  &:hover, &:focus {
-    background-color: ${darken(0.05, color)}
-    border-color: ${darken(0.05, color)} 
-  }
-`;
-
-const stylesImportanceSecondaryOf = color => `
-  ${colorAndFill(color)}
-  background-color: transparent;
-  border-color: ${color};
-
-  &:hover, &:focus {
-    border-color: ${darken(0.15, color)}
-    ${colorAndFill(darken(0.15, color))}
-  }
-`;
-
-const stylesImportancetertiaryOf = color => `
-  ${colorAndFill(color)}
-  background-color: transparent;
-  border-color: transparent;
-
-  &:hover, &:focus {
-    ${colorAndFill(darken(0.15, color))}
-  }
-`;
 
 const ButtonInnerStyled = styled.span`
   align-items: center;

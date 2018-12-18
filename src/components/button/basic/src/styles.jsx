@@ -13,8 +13,8 @@ const stylesCommon = theme => `
   box-sizing: border-box;
   display: inline-block;
   font-family: ${theme.font.family.main};
-  font-size: ${props.theme.font.size.m};
-  font-weight: ${props.theme.font.weight.m};
+  font-size: ${theme.font.size.m};
+  font-weight: ${theme.font.weight.m};
   height: 40px;
   line-height: normal;
   white-space: nowrap;

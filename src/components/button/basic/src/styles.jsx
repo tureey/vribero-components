@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const ButtonBasicStyled = styled.button`
-  ${({ theme }) => stylesCommon(theme)};
+  ${props => stylesCommon(props)};
 `;
 const LinkStyled = styled.a`
   text-decoration: none;
@@ -15,7 +15,7 @@ const stylesCommon = props => `
   height: 40px;
   box-sizing: border-box;
   
-  border: '1px solid ${props.theme.palette.grey["200"]};
+  border: 1px solid ${props.props.palette.grey["200"]};
   background: none;
   padding-top: 0 ${props.theme.spacing.s} 0 ${props.theme.spacing.s};
   user-select: none;
@@ -30,10 +30,10 @@ const stylesCommon = props => `
   transition: 0.15s background-color all;
   cursor: ${props.disabled ? "not-allowed" : "pointer"};
 
-  ${stylesShape(props.shape, props.theme.box.radius)};
-  ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
-  ${stylesSizes(props.size, props.theme)};
   ${stylesColor(props.color, props.importance, props.theme)};
+  ${stylesShape(props.shape, props.theme.box.radius)};
+  ${stylesSizes(props.size, props.theme)};
+  ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
 `;
 
 const stylesShape = (_propShape, radius) =>

@@ -14,6 +14,7 @@ const stylesCommon = props => `
   width: ${props.fullWidth ? "100%" : "auto"};
   height: 40px;
   box-sizing: border-box;
+  border-radius: ${props.theme.box.radius.rounded};
   
   border: 1px solid ${props.theme.palette.grey["200"]};
   user-select: none;
@@ -27,18 +28,11 @@ const stylesCommon = props => `
   transition: 0.15s background-color all;
   cursor: ${props.disabled ? "not-allowed" : "pointer"};
 
+  ${console.log(props.theme.box.radius)}
   ${stylesColor(props.color, props.importance, props.theme)};
-  ${stylesShape(props.shape, props.theme.box.radius)};
   ${stylesSizes(props.size, props.theme)};
   ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
 `;
-
-const stylesShape = (_propShape, radius) =>
-  _propShape === "rounded"
-    ? `border-radius: ${radius.rounded}`
-    : _propShape === "pill"
-    ? `border-radius: ${radius.pill}`
-    : `border-radius: ${radius.none}`;
 
 const stylesSizes = (_propSize, theme) =>
   _propSize === "small"

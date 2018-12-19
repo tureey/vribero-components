@@ -3,22 +3,15 @@ import styled from "@emotion/styled";
 const LinkStyled = styled.a`
   font-family: ${props => props.theme.font.family.main};
   font-weight: ${props => props.theme.font.weight.m};
-  transition: 0.15s ease all;
+  color: ${theme.palette.primary["500"]}
+  text-decoration: ${({ isUnderlined }) =>
+    isUnderlined ? "underline" : "none"};
   cursor: pointer;
-  text-decoration: ${props => (props.isUnderlined ? "underline" : "none")};
+  transition: text-decoration 0.15s ease;
 
   :hover {
+    color: ${theme.palette.primary["700"]}
     text-decoration: underline;
   }
-
-  ${({ color, theme }) =>
-    color === "primary"
-      ? `
-        color: ${theme.palette.primary["500"]}
-        &:hover {
-          color: ${theme.palette.primary["700"]}
-        }
-      `
-      : ``};
 `;
 export { LinkStyled };

@@ -19,7 +19,7 @@ function BreadcrumbsList(props) {
   return (
     <BreadcrumbsListStyled theme={props.theme}>
       {props.items.map(({ url, label }, index) => {
-        const isLastItem = index === array.length - 1;
+        const isLastItem = index === props.items.length - 1;
         return (
           <BreadcrumbsElementStyled theme={props.theme} key={index}>
             {!isLastItem && (

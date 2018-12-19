@@ -7,21 +7,23 @@ import {
 } from "./styles";
 import Link from "vribero-component--navigation-link--themed/lib";
 
-const Breadcrumbs = props => (
-  <nav aria-label="breadcrumb" role="navigation">
+function Breadcrumbs(props) {
+  return (
+    <nav aria-label="breadcrumb" role="navigation">
+      <BreadcrumbsList {...props} />
+    </nav>
+  );
+}
+
+function BreadcrumbsList(props) {
+  return (
     <BreadcrumbsListStyled theme={props.theme}>
       {props.items.map(({ url, label }, index) => {
-        const isLastItem = index + 1 >= props.items.length;
-
+        const isLastItem = index === array.length - 1;
         return (
           <BreadcrumbsElementStyled theme={props.theme} key={index}>
             {!isLastItem && (
-              <BreadcrumbLink
-                color={props.color}
-                target={props.target}
-                url={url}
-                theme={props.theme}
-              >
+              <BreadcrumbLink url={url} theme={props.theme}>
                 {label}
               </BreadcrumbLink>
             )}
@@ -33,18 +35,18 @@ const Breadcrumbs = props => (
         );
       })}
     </BreadcrumbsListStyled>
-  </nav>
-);
+  );
+}
 
-const BreadcrumbLink = ({ color, target, url, children, theme }) => (
-  <Link color={color} target={target} url={url} theme={theme}>
-    {children}
-  </Link>
-);
+function BreadcrumbLink({ url, children, theme }) {
+  return (
+    <Link target="_self" url={url} theme={theme}>
+      {children}
+    </Link>
+  );
+}
 
 Breadcrumbs.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary"]),
-  target: PropTypes.oneOf(["_self", "_blank"]),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -52,12 +54,7 @@ Breadcrumbs.propTypes = {
     })
   ).isRequired,
 
-  theme: PropTypes.object
-};
-
-Breadcrumbs.defaultProps = {
-  color: "primary",
-  target: "_self"
+  theme: PropTypes.object.isRequired
 };
 
 export default Breadcrumbs;

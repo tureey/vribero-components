@@ -5,7 +5,7 @@ const theme = {
       700: "hsl(122, 39%, 41%)",
       500: "hsl(123, 35%, 51%)",
       300: "hsl(126, 49%, 84%)",
-      100: "hsl(1125, 65%, 93%)"
+      100: "hsl(125, 65%, 93%)"
     },
     grey: {
       900: "hsl(42, 15%, 13%)", // Titles
@@ -56,10 +56,13 @@ const theme = {
       rounded: "3px",
       pill: "500px"
     },
-    shadow: [
-      "0 3px 5px rgba(1,1,1,0.2)",
-      "0 2px 3px rgba(1,1,1,0.4)"
-    ]
+    shadow: {
+      900: "0 2px 3px rgba(1,1,1,0.4)",
+      700: "0 3px 5px rgba(1,1,1,0.2)",
+      500: "0px 4px 6px 0px rgba(0, 0, 0, 0.1)",
+      300: "0px 4px 6px 0px rgba(0, 0, 0, 0.06)",
+      100: "0px 2px 4px 0px rgba(0, 0, 0, 0.06)",
+    }
   },
   font: {
     size: {
@@ -79,7 +82,7 @@ const theme = {
     },
     family: {
       primary: '"Raleway", Open-sans, sans-serif',
-      secondary: '"Fjalla One", sans-serif',
+      secondary: undefined,
       serif: '"Merriweather", serif;'
     }
   }

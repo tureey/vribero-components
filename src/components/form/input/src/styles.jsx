@@ -1,17 +1,19 @@
 import styled from "@emotion/styled";
 
 const InputStyled = styled.input`
+  background-color: ${props => props.theme.palette.grey["200"]};
   width: 100%;
   box-sizing: border-box;
   border: none;
-  color: ${props => props.theme.palette.grey["500"]};
   outline: none;
-  font-family: ${props => props.theme.font.family.main};
-  letter-spacing: 0.2px;
-  font-weight: 300;
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
     0 1px 2px rgba(102, 119, 136, 0.3);
-  background-color: ${props => props.theme.palette.grey["200"]};
+
+  color: ${props => props.theme.palette.grey["500"]};
+  font-family: ${props => props.theme.font.family.primary};
+  letter-spacing: 0.2px;
+  font-weight: 300;
+
   ${props => (props.appearance === "white" ? `background: white;` : ``)};
   ${({ shape }) => stylesShape(shape)};
   ${({ disabled }) => stylesDisabled(disabled)};

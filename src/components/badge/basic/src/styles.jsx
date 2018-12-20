@@ -11,7 +11,7 @@ const BadgeBasicStyled = styled.span`
   border-radius: 2px;
   box-sizing: border-box;
   display: inline-block;
-  font-family: ${props => props.theme.font.family.main};
+  font-family: ${props => props.theme.font.family.primary};
   font-size: ${props => props.theme.font.size.m};
   font-weight: 300;
   line-height: normal;

@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--card-media--themed",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Media card with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

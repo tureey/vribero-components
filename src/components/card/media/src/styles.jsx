@@ -7,7 +7,7 @@ const CardStyled = styled.div`
   border: ${props => `1px solid ${props.theme.palette.grey["200"]}`};
   border-radius: 3px;
   background: white;
-  font-family: ${props => props.theme.font.family.main};
+  font-family: ${props => props.theme.font.family.primary};
   font-size: ${props => props.theme.font.size.m};
   font-weight: ${props => props.theme.font.weight.m};
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),

@@ -58,9 +58,9 @@ const stylesSizes = (_propSize, theme) =>
 const stylesBoxShadow = (_propsIsElevated, boxShadow) =>
   _propsIsElevated
     ? `
-    box-shadow: ${boxShadow["0"]};
+    box-shadow: ${boxShadow["700"]};
     &:hover {
-      box-shadow: ${boxShadow["1"]};
+      box-shadow: ${boxShadow["900"]};
     }
   `
     : "";

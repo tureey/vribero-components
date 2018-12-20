@@ -10,7 +10,7 @@ const TextareaStyled = styled.textarea`
   border: none;
   color: ${props => props.theme.palette.grey["900"]};
   outline: none;
-  font-family: ${props => props.theme.font.family.main};
+  font-family: ${props => props.theme.font.family.primary};
   letter-spacing: 0.2px;
   font-weight: 300;
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),

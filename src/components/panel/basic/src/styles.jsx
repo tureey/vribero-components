@@ -6,7 +6,7 @@ const PanelBasicStyled = styled.section`
   border-radius: ${props => props.theme.box.radius.rounded};
   border-left: ${({ colored, theme }) =>
     colored ? `3px solid ${theme.palette.grey["900"]}` : "none"};
-  font-family: ${props => props.theme.font.family.main};
+  font-family: ${props => props.theme.font.family.primary};
   font-size: ${props => props.theme.font.size.m};
   font-weight: ${props => props.theme.font.weight.s};
   letter-spacing: 0.25px;

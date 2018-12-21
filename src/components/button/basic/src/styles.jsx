@@ -96,6 +96,7 @@ const stylesColor = (_propColor, _propImportance, theme) =>
         color: ${theme.palette.primary["500"]};
         fill: ${theme.palette.primary["500"]};
         background-color: transparent;
+        border-color: transparent;
 
         &:hover, &:focus {
           color: ${theme.palette.primary["700"]};

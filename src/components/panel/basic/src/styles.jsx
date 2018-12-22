@@ -8,7 +8,7 @@ const PanelBasicStyled = styled.section`
     colored ? `3px solid ${theme.palette.grey["900"]}` : "none"};
   font-family: ${props => props.theme.font.family.primary};
   font-size: ${props => props.theme.font.size.m};
-  font-weight: ${props => props.theme.font.weight.s};
+  font-weight: ${props => props.theme.font.weight.light};
   letter-spacing: 0.25px;
   // box-shadow: 0 2px 1px 0 rgba(0,0,0,.05);
 `;
@@ -24,7 +24,7 @@ const PanelBasicHeaderStyled = styled.header`
 
 const PanelBasicTitleStyled = styled.h3`
   box-sizing: border-box;
-  font-weight: ${props => props.theme.font.weight.m};
+  font-weight: ${props => props.theme.font.weight.medium};
   line-height: normal;
   margin: 0;
   color: ${props => props.theme.palette.grey["900"]};

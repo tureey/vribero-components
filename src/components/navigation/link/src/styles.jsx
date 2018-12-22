@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const LinkStyled = styled.a`
   font-family: ${({ theme }) => theme.font.family.primary};
-  font-weight: ${({ theme }) => theme.font.weight.m};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   color: ${({ theme }) => theme.palette.primary["500"]};
   text-decoration: ${({ isUnderlined }) =>
     isUnderlined ? "underline" : "none"};

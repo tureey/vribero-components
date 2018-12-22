@@ -20,7 +20,7 @@ const stylesCommon = props => `
   user-select: none;
 
   font-family: ${props.theme.font.family.primary};
-  font-weight: ${props.theme.font.weight.m};
+  font-weight: ${props.theme.font.weight.medium};
 
   line-height: normal;
   white-space: nowrap;

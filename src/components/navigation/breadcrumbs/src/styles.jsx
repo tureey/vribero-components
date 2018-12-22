@@ -17,14 +17,14 @@ const BreadcrumbsElementStyled = styled.li`
       content: ">";
       margin-right: ${props => props.theme.spacing.s};
       color: ${props => props.theme.palette.grey["700"]};
-      font-weight: ${props => props.theme.font.weight.s};
+      font-weight: ${props => props.theme.font.weight.light};
     }
   }
 `;
 
 const LastItemStyled = styled.span`
   color: ${props => props.theme.palette.grey["700"]};
-  font-weight: ${props => props.theme.font.weight.s};
+  font-weight: ${props => props.theme.font.weight.light};
   font-size: ${props => props.theme.font.size.s};
   font-family: ${props => props.theme.font.family.primary};
 `;

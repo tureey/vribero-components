@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--navigation-breadcrumbs--themed",
-  "version": "3.0.6",
+  "version": "3.1.0",
   "description": "Basic breadcrumbs with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.4",
-    "vribero-component--navigation-link--themed": "3"
+    "vribero-component--navigation-link--themed": "^3.1.0"
   }
 }

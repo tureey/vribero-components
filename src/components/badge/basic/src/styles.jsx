@@ -1,21 +1,31 @@
 import styled from "@emotion/styled";
 
 const BadgeBasicStyled = styled.span`
-  background: none;
-  font-size: 15px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-right: ${props => props.theme.spacing.s};
-  padding-left: ${props => props.theme.spacing.s};
-  user-select: none;
-  border-radius: 2px;
+  background: transparent;
   box-sizing: border-box;
   display: inline-block;
   font-family: ${props => props.theme.font.family.primary};
-  font-size: ${props => props.theme.font.size.m};
-  font-weight: 300;
   line-height: normal;
   white-space: nowrap;
-  opacity: ${({ disabled }) => (disabled ? 0.3 : 1)};
+  font-weight: ${props => props.theme.font.weight.medium};
+
+  ${({ size, theme }) => stylesSizes(size, theme)};
 `;
+
+const stylesSizes = (_propSize, theme) =>
+  _propSize === "small"
+    ? `
+      font-size: ${theme.font.size.xs};
+      padding: ${theme.spacing.xs} ${theme.spacing.xxs};
+    `
+    : _propSize === "large"
+    ? `
+    font-size: ${theme.font.size.m};
+    padding: ${theme.spacing.xs} ${theme.spacing.l};
+    font-weight: ${props => props.theme.font.weight.bold};
+    `
+    : `
+    font-size: ${theme.font.size.s};
+    padding: ${theme.spacing.s} ${theme.spacing.xs};
+      `;
 export { BadgeBasicStyled };

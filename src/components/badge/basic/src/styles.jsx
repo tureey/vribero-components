@@ -12,8 +12,8 @@ const BadgeBasicStyled = styled.span`
   background: ${props => props.theme.palette.primary["500"]};
 
   ${({ size, theme }) => stylesSizes(size, theme)};
-  ${({ shape, theme }) => stylesShape(shape, theme)}
-  ${({ color, theme }) => stylesColor(color, theme)}
+  ${({ shape, theme }) => stylesShape(shape, theme)};
+  ${({ color, theme }) => stylesColor(color, theme)};
 `;
 
 const stylesSizes = (_propSize, theme) =>
@@ -43,16 +43,17 @@ const stylesShape = (shape, theme) =>
 const stylesColor = (color, theme) =>
   color === "yellow"
     ? `
-      background: ${theme.palette.accent.yellow["300"]}
-      color:  ${theme.palette.accent.yellow["700"]}
+      background: ${theme.palette.accent.yellow["300"]};
+      color:  ${theme.palette.accent.yellow["700"]};
     `
     : color === "red"
     ? `
-      background: ${theme.palette.accent.red["300"]}
-      color:  ${theme.palette.accent.red["700"]}`
+      background: ${theme.palette.accent.red["300"]};
+      color:  ${theme.palette.accent.red["700"]};
+      `
     : `
-      background: ${theme.palette.primary["300"]}
-      color:  ${theme.palette.primary["700"]}
+      background: ${theme.palette.primary["300"]};
+      color:  ${theme.palette.primary["700"]};
     `;
 
 export { BadgeBasicStyled };

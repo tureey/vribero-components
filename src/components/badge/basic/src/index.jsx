@@ -15,7 +15,7 @@ const BadgeBasic = ({ color, size, shape, children, theme }) => (
 );
 
 BadgeBasic.propTypes = {
-  color: PropTypes.oneOf(["primary"]),
+  color: PropTypes.oneOf(["primary", "yellow", "red"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   shape: PropTypes.oneOf(["square", "rounded", "pill"]),
 

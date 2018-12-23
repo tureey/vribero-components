@@ -76,9 +76,10 @@ const theme = {
       giant: "48px"
     },
     weight: {
-      s: 300,
-      m: 500,
-      l: 700
+      light: 300,
+      regular: 400,
+      medium: 500,
+      bold: 700
     },
     family: {
       primary: '"Raleway", Open-sans, sans-serif',

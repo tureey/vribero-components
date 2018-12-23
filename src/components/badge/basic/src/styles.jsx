@@ -10,6 +10,7 @@ const BadgeBasicStyled = styled.span`
   font-weight: ${props => props.theme.font.weight.medium};
 
   ${({ size, theme }) => stylesSizes(size, theme)};
+  ${({ shape, theme }) => styledShape(shape, theme)}
 `;
 
 const stylesSizes = (_propSize, theme) =>
@@ -28,4 +29,12 @@ const stylesSizes = (_propSize, theme) =>
     font-size: ${theme.font.size.s};
     padding: ${theme.spacing.s} ${theme.spacing.xs};
       `;
+
+const styledShape = (shape, theme) =>
+  shape === "square"
+    ? `border-radius: ${theme.box.radius.none}`
+    : shape === "pill"
+    ? `border-radius: ${theme.box.radius.pill}`
+    : `border-radius: ${theme.box.radius.rounded}`;
+
 export { BadgeBasicStyled };

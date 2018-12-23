@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
  * The borderSize is how many pixels wider is the wrapper from the children
  */
 const Wrapper = styled.span`
+  border-radius: 500px;
   padding: ${({ borderSize }) => `${borderSize}px`};
 
   ${({ size }) =>

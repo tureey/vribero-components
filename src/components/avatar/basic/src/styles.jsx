@@ -1,47 +1,44 @@
 import styled from "@emotion/styled";
 
-const AvatarBasicStyled = styled.img`
-  border: ${props => (props.isBordered ? "1px solid" : "none")};
-  outline: none;
-  box-sizing: border-box;
-  display: inline-block;
-  transition: 0.15s ease all;
+/*
+ * The borderSize is how many pixels wider is the wrapper from the children
+ */
+const Wrapper = styled.span`
+  padding: ${({ borderSize }) => `${borderSize}px`};
 
   ${({ size }) =>
     size === "xsmall"
       ? `
-        width: 20px;
-        height: 20px;
-        `
+    width: 20px;
+    height: 20px;
+    `
       : size === "small"
       ? `
-        width: 25px;
-        height: 25px;
-        `
+    width: 25px;
+    height: 25px;
+    `
       : size === "medium"
       ? `
-        width: 30px;
-        height: 30px;
-        `
+    width: 30px;
+    height: 30px;
+    `
       : `
-        width: 40px;
-        height: 40px;
-      `}
-
-  ${({ shape }) =>
-    shape === "square"
-      ? `border-radius: 0;`
-      : shape === "rounded"
-      ? `border-radius: 3px`
-      : shape === "circle"
-      ? `border-radius: 500px`
-      : ``};
+    width: 40px;
+    height: 40px;
+  `}
 
   ${({ borderColor, theme }) =>
     borderColor === "primary"
-      ? `border-color: ${theme.palette.primary["500"]};`
+      ? `background: ${theme.palette.primary["500"]};`
       : borderColor === "grey"
-      ? `border-color: ${theme.palette.grey["200"]};`
+      ? `background: ${theme.palette.grey["200"]};`
       : ``};
 `;
-export { AvatarBasicStyled };
+
+const AvatarBasicStyled = styled.img`
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 500px;
+`;
+export { Wrapper, AvatarBasicStyled };

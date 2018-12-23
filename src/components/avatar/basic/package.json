@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--avatar-basic--themed",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Basic avatar with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

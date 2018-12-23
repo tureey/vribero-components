@@ -19,7 +19,7 @@ const stylesSizes = (_propSize, theme) =>
   _propSize === "small"
     ? `
       font-size: ${theme.font.size.xs};
-      padding: ${theme.spacing.xs} ${theme.spacing.xxs};
+      padding: ${theme.spacing.xxs} ${theme.spacing.xs};
     `
     : _propSize === "large"
     ? `

@@ -29,7 +29,7 @@ const stylesSizes = (_propSize, theme) =>
     `
     : `
     font-size: ${theme.font.size.s};
-    padding: ${theme.spacing.s} ${theme.spacing.xs};
+    padding: ${theme.spacing.xxs} ${theme.spacing.xs};
       `;
 
 const styledShape = (shape, theme) =>

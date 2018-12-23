@@ -8,6 +8,8 @@ const BadgeBasicStyled = styled.span`
   line-height: normal;
   white-space: nowrap;
   font-weight: ${props => props.theme.font.weight.medium};
+  color: white;
+  background: ${props => props.theme.palette.primary["500"]};
 
   ${({ size, theme }) => stylesSizes(size, theme)};
   ${({ shape, theme }) => styledShape(shape, theme)}

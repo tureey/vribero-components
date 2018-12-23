@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BadgeBasicStyled } from "./styles";
 
-const BadgeBasic = ({ type, size, shape, children, theme }) => (
+const BadgeBasic = ({ color, size, shape, children, theme }) => (
   <BadgeBasicStyled
     role="status"
-    type={type}
+    color={color}
     size={size}
     shape={shape}
     theme={theme}
@@ -15,7 +15,7 @@ const BadgeBasic = ({ type, size, shape, children, theme }) => (
 );
 
 BadgeBasic.propTypes = {
-  type: PropTypes.oneOf(["primary"]).isRequired,
+  color: PropTypes.oneOf(["primary"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   shape: PropTypes.oneOf(["square", "rounded", "pill"]),
 
@@ -23,7 +23,7 @@ BadgeBasic.propTypes = {
 };
 
 BadgeBasic.defaultProps = {
-  type: "primary",
+  color: "primary",
   size: "small",
   shape: "rounded"
 };

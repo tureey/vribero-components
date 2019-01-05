@@ -60,9 +60,11 @@ const ButtonBasic = ({
 
 const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
   <ButtonInnerStyled theme={theme}>
-    <LeftIconWrapper theme={theme}>{leftIcon}</LeftIconWrapper>
+    {leftIcon && <LeftIconWrapper theme={theme}>{leftIcon}</LeftIconWrapper>}
     <span>{children}</span>
-    <RightIconWrapper theme={theme}>{rightIcon}</RightIconWrapper>
+    {rightIcon && (
+      <RightIconWrapper theme={theme}>{rightIcon}</RightIconWrapper>
+    )}
   </ButtonInnerStyled>
 );
 

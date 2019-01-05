@@ -119,9 +119,11 @@ const ButtonInnerStyled = styled.span`
 `;
 
 const LeftIconWrapper = styled.span`
+  display: flex;
   margin-right: ${props => props.theme.spacing.xs};
 `;
 const RightIconWrapper = styled.span`
+  display: flex;
   margin-left: ${props => props.theme.spacing.xs};
 `;
 export {

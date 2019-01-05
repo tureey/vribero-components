@@ -118,4 +118,16 @@ const ButtonInnerStyled = styled.span`
   }
 `;
 
-export { ButtonBasicStyled, LinkStyled, ButtonInnerStyled };
+const leftIconWrapper = styled.span`
+  margin-right: ${props => props.theme.spacing.xs};
+`;
+const rightIconWrapper = styled.span`
+  margin-left: ${props => props.theme.spacing.xs};
+`;
+export {
+  ButtonBasicStyled,
+  LinkStyled,
+  ButtonInnerStyled,
+  leftIconWrapper,
+  rightIconWrapper
+};

@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ButtonBasicStyled, LinkStyled, ButtonInnerStyled } from "./styles";
+import {
+  ButtonBasicStyled,
+  LinkStyled,
+  ButtonInnerStyled,
+  leftIconWrapper,
+  rightIconWrapper
+} from "./styles";
 
 const ButtonBasic = ({
   size,
@@ -54,9 +60,9 @@ const ButtonBasic = ({
 
 const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
   <ButtonInnerStyled theme={theme}>
-    {leftIcon}
+    <leftIconWrapper>{leftIcon}</leftIconWrapper>
     <span>{children}</span>
-    {rightIcon}
+    <rightIconWrapper>{rightIcon}</rightIconWrapper>
   </ButtonInnerStyled>
 );
 

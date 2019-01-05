@@ -118,16 +118,16 @@ const ButtonInnerStyled = styled.span`
   }
 `;
 
-const leftIconWrapper = styled.span`
+const LeftIconWrapper = styled.span`
   margin-right: ${props => props.theme.spacing.xs};
 `;
-const rightIconWrapper = styled.span`
+const RightIconWrapper = styled.span`
   margin-left: ${props => props.theme.spacing.xs};
 `;
 export {
   ButtonBasicStyled,
   LinkStyled,
   ButtonInnerStyled,
-  leftIconWrapper,
-  rightIconWrapper
+  LeftIconWrapper,
+  RightIconWrapper
 };

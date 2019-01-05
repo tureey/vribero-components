@@ -4,8 +4,8 @@ import {
   ButtonBasicStyled,
   LinkStyled,
   ButtonInnerStyled,
-  leftIconWrapper,
-  rightIconWrapper
+  LeftIconWrapper,
+  RightIconWrapper
 } from "./styles";
 
 const ButtonBasic = ({
@@ -60,9 +60,9 @@ const ButtonBasic = ({
 
 const InnerButton = ({ leftIcon, rightIcon, children, theme }) => (
   <ButtonInnerStyled theme={theme}>
-    <leftIconWrapper>{leftIcon}</leftIconWrapper>
+    <LeftIconWrapper>{leftIcon}</LeftIconWrapper>
     <span>{children}</span>
-    <rightIconWrapper>{rightIcon}</rightIconWrapper>
+    <RightIconWrapper>{rightIcon}</RightIconWrapper>
   </ButtonInnerStyled>
 );
 

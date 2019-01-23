@@ -8,7 +8,7 @@ const TextareaStyled = styled.textarea`
   min-height: 150px;
   box-sizing: border-box;
   border: none;
-  color: ${props => props.theme.palette.grey["900"]};
+  color: ${props => props.theme.palette.grey["800"]};
   outline: none;
   font-family: ${props => props.theme.font.family.primary};
   letter-spacing: 0.2px;

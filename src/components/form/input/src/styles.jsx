@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const InputStyled = styled.input`
-  background-color: ${props => props.theme.palette.grey["200"]};
+  background-color: ${props => props.theme.palette.grey["100"]};
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -24,7 +24,7 @@ const InputStyled = styled.input`
   }
 
   &:focus {
-    background: ${props => props.theme.palette.grey["300"]};
+    background: ${props => props.theme.palette.grey["200"]};
   }
 `;
 

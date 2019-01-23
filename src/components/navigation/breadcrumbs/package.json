@@ -1,6 +1,6 @@
 {
   "name": "vribero-component--navigation-breadcrumbs--themed",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Basic breadcrumbs with JSS prepared to receive a theme as json",
   "main": "index.js",
   "scripts": {

@@ -9,7 +9,7 @@ const InputStyled = styled.input`
   box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
     0 1px 2px rgba(102, 119, 136, 0.3);
 
-  color: ${props => props.theme.palette.grey["900"]};
+  color: ${props => props.theme.palette.grey["800"]};
   font-family: ${props => props.theme.font.family.primary};
   letter-spacing: 0.2px;
   font-weight: 300;

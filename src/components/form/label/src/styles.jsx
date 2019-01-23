@@ -7,6 +7,12 @@ const LabelStyled = styled.label`
   font-family: ${props => props.theme.font.family.primary};
   font-weight: ${props => props.theme.font.weight.medium};
   letter-spacing: 0.25px;
+
+  + input,
+  + textarea,
+  + select {
+    margin-top: ${props => props.theme.spacing.xs};
+  }
 `;
 
 export { LabelStyled };

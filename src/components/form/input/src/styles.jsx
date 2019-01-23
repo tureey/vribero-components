@@ -17,11 +17,7 @@ const InputStyled = styled.input`
   ${props => (props.appearance === "white" ? `background: white;` : ``)};
   ${({ shape }) => stylesShape(shape)};
   ${({ disabled }) => stylesDisabled(disabled)};
-  ${({ size, theme }) => sylesSize(size, theme)};
-
-  & + label {
-    margin-top: ${props => props.theme.spacing.m};
-  }
+  ${({ size, theme }) => stylesSize(size, theme)};
 
   &:focus {
     background: ${props => props.theme.palette.grey["200"]};
@@ -37,7 +33,7 @@ const stylesShape = shape =>
     ? `border-radius: 500px`
     : ``;
 
-const sylesSize = (size, theme) =>
+const stylesSize = (size, theme) =>
   size === "small"
     ? `
     font-size: ${theme.font.size.xs};

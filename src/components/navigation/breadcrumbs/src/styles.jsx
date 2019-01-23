@@ -16,14 +16,14 @@ const BreadcrumbsElementStyled = styled.li`
     &:before {
       content: ">";
       margin-right: ${props => props.theme.spacing.s};
-      color: ${props => props.theme.palette.grey["900"]};
+      color: ${props => props.theme.palette.grey["800"]};
       font-weight: ${props => props.theme.font.weight.light};
     }
   }
 `;
 
 const LastItemStyled = styled.span`
-  color: ${props => props.theme.palette.grey["900"]};
+  color: ${props => props.theme.palette.grey["800"]};
   font-weight: ${props => props.theme.font.weight.light};
   font-size: ${props => props.theme.font.size.s};
   font-family: ${props => props.theme.font.family.primary};

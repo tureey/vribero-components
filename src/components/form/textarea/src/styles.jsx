@@ -19,13 +19,14 @@ const TextareaStyled = styled.textarea`
   letter-spacing: 0.2px;
   font-weight: 300;
 
+  + label {
+    margin-top: ${props => props.theme.spacing.m};
+  }
+
   &:focus {
     background: ${props => props.theme.palette.grey["200"]};
     box-shadow: ${({ theme }) =>
-      `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
-  }
-  & + label {
-    margin-top: ${props => props.theme.spacing.l};
+      `${theme.box.shadow["100"]},${theme.box.shadow["300"]}`};
   }
 
   ${props =>

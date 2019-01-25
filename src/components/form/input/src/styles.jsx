@@ -20,10 +20,14 @@ const InputStyled = styled.input`
   ${({ disabled }) => stylesDisabled(disabled)};
   ${({ size, theme }) => stylesSize(size, theme)};
 
+  + label {
+    margin-top: ${({ theme }) => theme.spacing.m};
+  }
+
   &:focus {
     background: ${props => props.theme.palette.grey["200"]};
     box-shadow: ${({ theme }) =>
-      `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
+      `${theme.box.shadow["100"]},${theme.box.shadow["300"]}`};
   }
 `;
 

@@ -6,8 +6,9 @@ const InputStyled = styled.input`
   box-sizing: border-box;
   border: none;
   outline: none;
-  box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
-    0 1px 2px rgba(102, 119, 136, 0.3);
+  box-shadow: ${({ theme }) =>
+    `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
+  transition: box-shadow 0.15s ease-out, background-color 0.5s ease;
 
   color: ${props => props.theme.palette.grey["800"]};
   font-family: ${props => props.theme.font.family.primary};
@@ -21,6 +22,8 @@ const InputStyled = styled.input`
 
   &:focus {
     background: ${props => props.theme.palette.grey["200"]};
+    box-shadow: ${({ theme }) =>
+      `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
   }
 `;
 

@@ -8,18 +8,22 @@ const TextareaStyled = styled.textarea`
   min-height: 150px;
   box-sizing: border-box;
   border: none;
-  color: ${props => props.theme.palette.grey["800"]};
   outline: none;
+  background-color: ${props => props.theme.palette.grey["100"]};
+  box-shadow: ${({ theme }) =>
+    `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
+  transition: box-shadow 0.15s ease-out, background-color 0.5s ease;
+
+  color: ${props => props.theme.palette.grey["800"]};
   font-family: ${props => props.theme.font.family.primary};
   letter-spacing: 0.2px;
   font-weight: 300;
-  box-shadow: 0 6px 8px rgba(102, 119, 136, 0.03),
-    0 1px 2px rgba(102, 119, 136, 0.3);
-  background-color: ${props => props.theme.palette.grey["100"]};
+
   &:focus {
     background: ${props => props.theme.palette.grey["200"]};
+    box-shadow: ${({ theme }) =>
+      `${theme.box.shadow["100"]},${theme.box.shadow["100"]}`};
   }
-
   & + label {
     margin-top: ${props => props.theme.spacing.l};
   }

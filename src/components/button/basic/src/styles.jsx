@@ -24,14 +24,22 @@ const stylesCommon = props => `
 
   line-height: normal;
   white-space: nowrap;
-  opacity: ${props.disabled ? 0.6 : 1};
   transition: background 0.15s ease, box-shadow 0.15s ease;
-  cursor: ${props.disabled ? "not-allowed" : "pointer"};
+  cursor: pointer;
 
   ${stylesColor(props.color, props.importance, props.theme)};
   ${stylesSizes(props.size, props.theme)};
   ${stylesBoxShadow(props.isElevated, props.theme.box.shadow)};
+  ${stylesDisabled(props.disabled, props.theme)};
 `;
+
+const stylesDisabled = (_disabled, theme) =>
+  _disabled
+    ? `
+      opacity: 0.6;
+      cursor: not-allowed;
+    `
+    : "";
 
 const stylesSizes = (_propSize, theme) =>
   _propSize === "small"

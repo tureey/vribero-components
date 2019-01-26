@@ -19,7 +19,8 @@ class Input extends Component {
       value,
       placeholder,
       disabled,
-      required
+      required,
+      ...rest
     } = this.props;
 
     return (
@@ -36,7 +37,7 @@ class Input extends Component {
         aria-required={required}
         required={required}
         onChange={this._handleOnChange}
-        {...this.props}
+        {...rest}
       />
     );
   }

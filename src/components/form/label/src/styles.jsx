@@ -36,4 +36,4 @@ const Error = styled.span`
   font-size: ${props => props.theme.font.size.xs};
 `;
 
-export { LabelStyled, Title, HelpText, FormField, Error };
+export { LabelStyled, Title, HelpText, Error };

@@ -18,7 +18,7 @@ function Input(props) {
       isInvalid={props.isInvalid}
       disabled={props.disabled}
       onChange={event => props.onchange(event.target.value)}
-      theme={theme}
+      theme={props.theme}
     />
   );
 }

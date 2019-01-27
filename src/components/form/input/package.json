@@ -27,7 +27,6 @@
     "babel-preset-react": "^6.24.1"
   },
   "dependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
     "@emotion/core": "^10.0.4"
   }
 }

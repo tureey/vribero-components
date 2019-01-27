@@ -4,7 +4,7 @@ const LabelStyled = styled.label`
   display: block;
 
   + label {
-    margin-bottom: ${props => props.theme.spacing.m};
+    margin-top: ${props => props.theme.spacing.m};
   }
 `;
 

@@ -19,7 +19,6 @@ class Input extends Component {
       appearance,
       placeholder,
       required,
-      required,
       disabled,
       isInvalid
     } = this.props;

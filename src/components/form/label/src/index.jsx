@@ -4,7 +4,7 @@ import { LabelStyled, Title } from "./styles";
 
 const Label = props => (
   <LabelStyled htmlFor={props.htmlFor} {...props}>
-    <Title>{text}</Title>
+    <Title>{props.text}</Title>
     {props.children}
   </LabelStyled>
 );

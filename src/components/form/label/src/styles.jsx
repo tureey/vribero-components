@@ -18,7 +18,7 @@ const Title = styled.span`
   letter-spacing: 0.25px;
 `;
 
-const HelpText = styled.span`
+const Help = styled.span`
   display: block;
   margin-bottom: ${props => props.theme.spacing.xxs};
   color: ${({ theme }) => theme.palette.grey["700"]};
@@ -36,4 +36,4 @@ const Error = styled.span`
   font-size: ${props => props.theme.font.size.xs};
 `;
 
-export { LabelStyled, Title, HelpText, Error };
+export { LabelStyled, Title, Help, Error };

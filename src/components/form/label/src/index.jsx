@@ -5,9 +5,9 @@ import { LabelStyled, Title, Help, Error } from "./styles";
 const Label = props => (
   <LabelStyled htmlFor={props.htmlFor} theme={props.theme} {...props}>
     <Title theme={props.theme}>{props.text}</Title>
-    {help && <Help theme={props.theme}>{props.help}</Help>}
+    {props.help && <Help theme={props.theme}>{props.help}</Help>}
     {props.field}
-    {error && <Error theme={props.theme}>{props.error}</Error>}
+    {props.error && <Error theme={props.theme}>{props.error}</Error>}
   </LabelStyled>
 );
 

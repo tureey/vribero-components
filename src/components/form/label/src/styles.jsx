@@ -16,12 +16,24 @@ const Title = styled.span`
   font-family: ${props => props.theme.font.family.primary};
   font-weight: ${props => props.theme.font.weight.medium};
   letter-spacing: 0.25px;
-
-  + input,
-  + textarea,
-  + select {
-    margin-bottom: ${props => props.theme.spacing.xs};
-  }
 `;
 
-export { LabelStyled, Title };
+const HelpText = styled.span`
+  display: block;
+  margin-bottom: ${props => props.theme.spacing.xxs};
+  color: ${({ theme }) => theme.palette.grey["700"]};
+  font-size: ${props => props.theme.font.size.xs};
+  font-family: ${props => props.theme.font.family.primary};
+  font-weight: ${props => props.theme.font.weight.light};
+  font-style: italic;
+  letter-spacing: 0.25px;
+`;
+
+const Error = styled.span`
+  display: block;
+  margin-top: ${props => props.theme.spacing.xs};
+  color: ${props => props.theme.palette.accent.red["700"]};
+  font-size: ${props => props.theme.font.size.xs};
+`;
+
+export { LabelStyled, Title, HelpText, FormField, Error };

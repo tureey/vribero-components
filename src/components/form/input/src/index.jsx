@@ -2,25 +2,51 @@ import React from "react";
 import PropTypes from "prop-types";
 import { InputStyled } from "./styles";
 
-function Input(props) {
-  return (
-    <InputStyled
-      id={props.id}
-      name={props.name}
-      type={props.type}
-      value={props.value}
-      size={props.size}
-      shape={props.shape}
-      appearance={props.appearance}
-      placeholder={props.placeholder}
-      aria-required={props.required}
-      required={props.required}
-      isInvalid={props.isInvalid}
-      disabled={props.disabled}
-      onChange={event => props.onChange(event.target.value)}
-      theme={props.theme}
-    />
-  );
+class Input extends Component {
+  constructor(props) {
+    super(props);
+    this._handleOnChange = this._handleOnChange.bind(this);
+  }
+
+  render() {
+    const {
+      id,
+      name,
+      type,
+      value,
+      size,
+      shape,
+      appearance,
+      placeholder,
+      required,
+      required,
+      disabled,
+      isInvalid
+    } = this.props;
+
+    return (
+      <InputStyled
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        size={size}
+        shape={shape}
+        appearance={appearance}
+        placeholder={placeholder}
+        aria-required={required}
+        required={required}
+        disabled={disabled}
+        isInvalid={isInvalid}
+        onChange={this._handleOnChange}
+        {...this.props}
+      />
+    );
+  }
+
+  _handleOnChange(event) {
+    this.props.onChange(event.target.value);
+  }
 }
 
 Input.propTypes = {

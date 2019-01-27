@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 const InputStyled = styled.input`
-  background-color: ${props => props.theme.palette.grey["100"]};
+  background-color: ${({ theme, isInvalid }) =>
+    isInvalid ? theme.palette.accent.red["100"] : theme.palette.grey["100"]};
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -20,8 +21,9 @@ const InputStyled = styled.input`
   ${({ disabled }) => stylesDisabled(disabled)};
   ${({ size, theme }) => stylesSize(size, theme)};
 
-  + label {
-    margin-top: ${({ theme }) => theme.spacing.m};
+  &[aria-invalid="true"] {
+    background: ${({ theme }) => theme.palette.accent.red["100"]} !important;
+    color: ${({ theme }) => theme.palette.accent.red["700"]} !important;
   }
 
   &:focus {

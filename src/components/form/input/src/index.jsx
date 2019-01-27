@@ -36,7 +36,7 @@ class Input extends Component {
         aria-required={required}
         required={required}
         disabled={disabled}
-        isInvalid={isInvalid}
+        aria-invalid={isInvalid}
         onChange={this._handleOnChange}
         {...this.props}
       />

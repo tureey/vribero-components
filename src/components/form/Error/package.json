@@ -1,0 +1,32 @@
+{
+  "name": "vribero-component--form-error--themed",
+  "version": "1.0.0",
+  "description": "Basic error message for form fields with JSS prepared to receive a theme as json",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./lib/* && ./node_modules/.bin/babel src --out-dir lib"
+  },
+  "keywords": [
+    "form",
+    "error",
+    "jss",
+    "accessibe",
+    "aria",
+    "ui",
+    "library",
+    "victorribero"
+  ],
+  "author": "Victor Ribero",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.4"
+  }
+}
